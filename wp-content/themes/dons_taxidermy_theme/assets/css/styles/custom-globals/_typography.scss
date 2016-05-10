@@ -82,7 +82,8 @@ h6{
 //## Styling for textual links
 a{
 	&:hover{
-		color: $white;
+		color: $black;
 		cursor: pointer;
+		text-decoration: none;
 	}
 }

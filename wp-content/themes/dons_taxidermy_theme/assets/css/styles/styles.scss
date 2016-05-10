@@ -30,7 +30,8 @@
 @import "elements/modals";
 @import "elements/blockquotes";
 @import "elements/tooltips";
-
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+@import url(https://fonts.googleapis.com/css?family=Chivo:900);
 //
 // Layouts
 // --------------------------------------------------
@@ -47,3 +48,4 @@
 // Templates
 // --------------------------------------------------
 @import "templates/placeholder";
+@import "templates/home";

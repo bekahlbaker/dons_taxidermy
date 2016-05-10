@@ -19,5 +19,54 @@
  <body class="ie9">
 <![endif]-->
 <!--[if !IE]>-->
-<body <?php body_class(); ?>>
+<body <?php body_class();  ?> >
+
 <!--<![endif]-->
+<header style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/img/Optimized-mountain.png);background-size: cover; ">
+	<div class="logo-bar">
+		<div class="container-fluid">
+			<div class="logo">
+				<img src="<?php bloginfo('template_directory'); ?>/assets/img/logo.png">
+			</div>
+		</div>
+	</div>
+	<div class="h1">
+		<h1>Bring Your Trophy Back to Life</h1>
+		<p>Welcome to Don's Taxidermy.The only shop you'll need for all your trophies.</p>
+	</div>
+	<!-- <div class="navbar">
+		<div class="container-fluid">
+			<div class="nav"> -->
+		<!-- desktop menu -->	
+<!-- 				<div class="nav-menu-desktop hidden-sm hidden-xs">
+					<?php
+						$defaults = array(
+							'theme_location' => 'main-nav',
+							'container' => false,
+							'depth' => 1
+						);
+						wp_nav_menu($defaults);
+					?>	
+				</div> -->
+		<!-- mobile menu -->
+<!-- 				<div class="nav-menu-mobile hidden-md hidden-lg">
+					<div id="mobile">
+						<span class="glyphicon glyphicon-align-justify"></span>
+					</div>
+					<div class="dropdown">
+						<?php
+						$defaults = array(
+							'theme_location' => 'main-nav',
+							'container' => false,
+							'depth' => 1
+						);
+						wp_nav_menu($defaults);
+					?>	
+					</div>
+				</div> -->
+<!-- 			</div>
+		</div>
+	</div> -->
+</header>
+
+
