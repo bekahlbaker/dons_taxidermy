@@ -4,38 +4,56 @@ header{
 		.logo{
 			img{
 				padding-top: 30px;
-				padding-left: 30px;
 				height: 20vh;
 			}
 		}
 	}
+	.h1{
+		margin-bottom: 0px;
+		padding-top: 50px;
+		h1{
+			font-family: $heading-font;
+			color: $green;
+			font-weight: 900;
+			text-align: center;
+			padding-top: 20px;
 
-	h1{
-		font-family: $heading-font;
-		color: $black;
-		font-weight: 900;
+		}
+		p{
+			font-family: $body-font;
+			color: $green;
+			font-weight: 400;
+			font-size: .5em;
+			padding-top: 20px;
+		}
 	}
 	.navbar{
-			background-color: $white;
+			background-color: $gray;
 			border-radius: 0;
-			margin: 30px 0px;
+			margin: 0px;
 			padding: 0px;
-		.pull-right{
-				padding-right: 10px;
+			text-align: center;
 
-			.nav-menu-desktop{
-					margin-right: 20px;
-
+			.nav{
+				padding: 30px 0px;
+		
 				li{
 					display: inline;
+					 // @media(max-width: $screen-sm-max){
+					 // 	display: block;
+					 // 	padding-top: 10px;
+					 // 	padding-bottom: 10px;
+					 // }
 					font-family: $body-font;
 					font-size: 1.25em;
 					font-weight: 400;
 					list-style: none;
-					padding: 0px 10px;
+					letter-spacing: 1px;
+					padding-right: 10px;
+					padding-left: 10px;
 					text-transform: uppercase;
 						a{
-							color: $black;
+							color: $white;
 
 							&:hover{
 								color: $orange;
@@ -43,15 +61,13 @@ header{
 						}
 				}
 			}
+
 			.nav-menu-mobile{
 				margin-right: 20px;
 
 				#mobile{
 					cursor: pointer;
-						margin-top: 30px;
-						padding: 10px;
-						padding-right: 30px;
-						text-align: center;
+					text-align: center;
 
 					span{
 						color: $orange;
@@ -62,7 +78,6 @@ header{
 				.dropdown{
 
 					ul{
-						padding: 10px!important;
 					}
 
 					li{
@@ -83,7 +98,6 @@ header{
 				}
 
 			}
-		}
 	}
 }
 
