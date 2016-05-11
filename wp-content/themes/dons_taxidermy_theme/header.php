@@ -23,25 +23,38 @@
 
 <!--<![endif]-->
 <header>
-<div class="hiding" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/img/Optimized-mountain.png);background-size: cover; ">
+<!-- sticky header -->
+<div class="hiding" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/img/mountain-white-space.png);background-size: cover; ">
 	<div class="logo-bar">
 		<div class="container">
 			<div class="logo">
-				<img src="<?php bloginfo('template_directory'); ?>/assets/img/logo.png">
+				<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_directory'); ?>/assets/img/logo.png"></a>
 			</div>
 		</div>
 	</div>
+<!-- hidden on page other than "home" -->
 	<div id="hiding-header">
 		<div class="h1">
-			<h1>Bring Your Trophy Back to Life</h1>
-			<div class="container">
-				<p>Welcome to Don's Taxidermy. <br><br>The only shop you'll need for all your trophies.</p>
-			</div>
+			<h1><?php the_field('h1') ?></h1>
 		</div>
+		<div class="container-fluid">
+			<div class="row hidden-sm hidden-xs">
+				<div class="message col-md-5 col-md-offset-1">
+					<p><?php the_field('message_1') ?><br><br><?php the_field('message_2') ?></p>
+				</div>
+				<div class="button col-md-6">
+					<a href=""><button>See My Work</button></a>
+				</div>
+			</div>
+		</div> 	
 	</div>
+<!-- end hidden -->
 </div>
+<!-- end sticky header -->
+
+<!-- sticky navbar -->
 <div class="sticky">
-		<div class="navbar">
+	<div class="navbar">
 		<div class="container-fluid">
 			<div class="nav">
 		<!-- desktop menu -->	
@@ -55,11 +68,12 @@
 						wp_nav_menu($defaults);
 					?>	
 				</div>
+		<!-- end desktop nav -->
 		<!-- mobile menu -->
 				<div class="nav-menu-mobile hidden-md hidden-lg">
-					<div id="mobile">
-						<span class="glyphicon glyphicon-align-justify"></span>
-					</div>
+					<button id="mobile">
+						<span class="glyphicon glyphicon-align-justify"></span> Menu
+					</button>
 					<div class="dropdown">
 						<?php
 						$defaults = array(
@@ -71,9 +85,11 @@
 					?>	
 					</div>
 				</div>
+		<!-- end mobile nav -->
 			</div>
 		</div>
 	</div>
 </div>
+<!-- end sticky navbar -->
 </header>
 

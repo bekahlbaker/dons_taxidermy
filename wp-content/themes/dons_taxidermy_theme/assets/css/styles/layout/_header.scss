@@ -1,103 +1,140 @@
 header{
-	height: 90vh;
-	.logo-bar{
-		.logo{
-			img{
+height: 90vh;
+	.hiding{
+		.logo-bar{
+			.logo{
+				img{
 				padding-top: 30px;
 				height: 20vh;
+				}
 			}
 		}
 	}
-	.h1{
-		margin-bottom: 0px;
-		padding-top: 50px;
-		h1{
+	#hiding-header{
+		.h1{
+		margin: 0px;
+		padding: 50px 0px;			
+			h1{
 			font-family: $heading-font;
 			color: $green;
 			font-weight: 900;
-			text-align: center;
-			padding-top: 20px;
-
-		}
-		p{
-			font-family: $body-font;
-			color: $green;
-			font-weight: 400;
-			font-size: .5em;
-			padding-top: 20px;
-		}
-	}
-	.navbar{
-			background-color: $gray;
-			border-radius: 0;
 			margin: 0px;
-			padding: 0px;
 			text-align: center;
-
-			.nav{
-				padding: 30px 0px;
-		
-				li{
-					display: inline;
-					 // @media(max-width: $screen-sm-max){
-					 // 	display: block;
-					 // 	padding-top: 10px;
-					 // 	padding-bottom: 10px;
-					 // }
+			padding: 20px 0px;
+			}
+		}
+		.row{
+			text-align: center;
+			padding: 10px 20px 40px 20px;
+				.col-md-6{
+				}
+				.message{
+					p{
 					font-family: $body-font;
+					color: $green;
 					font-size: 1.25em;
+					font-weight: 700;
+					margin: 0px;
+					padding: 20px 0px;
+					text-align: left;
+					}
+				}
+				.button{
+				padding: 20px 0px;
+				padding-top: 40px;
+					button{
+					background: $orange;
+					border: none;
+					color: $white;
+					font-family: $body-font;
+					font-size: 1em;
 					font-weight: 400;
-					list-style: none;
-					letter-spacing: 1px;
-					padding-right: 10px;
-					padding-left: 10px;
+					letter-spacing: 3px;
+					padding: 10px 60px;
 					text-transform: uppercase;
-						a{
-							color: $white;
-
-							&:hover{
-								color: $orange;
-							}
+						&:hover{
+						background: rgba($orange, .5);
+						color: $white;
 						}
+					}
 				}
 			}
-
-			.nav-menu-mobile{
-				margin-right: 20px;
-
-				#mobile{
-					cursor: pointer;
-					text-align: center;
-
-					span{
-						color: $orange;
-						font-size: 2em;
+	}
+	.sticky{
+		.navbar{
+		background-color: $gray;
+		border-radius: 0;
+		margin: 0px;
+		padding: 0px;
+		text-align: center;
+			.nav{
+			padding: 22px 0px;
+				.nav-menu-desktop{
+					li{
+					display: inline;
+					font-family: $body-font;
+					font-size: 1em;
+					font-weight: 400;
+					list-style: none;
+					letter-spacing: 3px;
+					padding-right: 50px;
+					padding-left: 50px;
+					text-transform: uppercase;
+						a{
+						color: $white;
+						padding: 17px 20px 0px 20px;
+							&:hover{
+							border-top: 7px solid $orange;
+							}
+						}
 					}
 				}
-
-				.dropdown{
-
-					ul{
+				.nav-menu-mobile{
+				text-align: center;
+					#mobile{
+					border: none;
+					color: $black;
+					font-family: $body-font;
+					font-size: 1em;
+					font-weight: 400;
+					background: $orange;
+					cursor: pointer;
+					padding: 10px 0px;
+					text-align: left;
+					text-transform: uppercase;
+					width: 90vw;
+						span{
+						color: $black;
+						font-size: 1em;
+						padding-left: 10px;
+						padding-right: 10px;
+						}
 					}
+					.dropdown{
+						ul{
+						padding-top: 30px;
+						padding-left: 0px;
+						}
 
-					li{
+						li{
 						font-family: $body-font;
 						font-size: 1em;
 						font-weight: 400;
 						list-style: none;
-						padding: 10px 0px;
+						padding: 20px 0px;
 						text-transform: uppercase;
-						a{
-							color: $black;
+						letter-spacing: 3px;
+							a{
+							color: $white;
 
-							&:hover{
+								&:hover{
 								color: $orange;
+								}
 							}
 						}
 					}
 				}
-
 			}
+		}
 	}
 }
-
