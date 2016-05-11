@@ -27,6 +27,9 @@ height: 90vh;
 		.row{
 			text-align: center;
 			padding: 10px 20px 40px 20px;
+			@media(max-width: $screen-sm-max){
+				display: none;
+			}
 				.col-md-6{
 				}
 				.message{
@@ -78,15 +81,14 @@ height: 90vh;
 					font-weight: 400;
 					list-style: none;
 					letter-spacing: 3px;
-					padding-right: 50px;
-					padding-left: 50px;
+					padding: 0px 50px 28px 50px;
 					text-transform: uppercase;
+						&:hover{
+						border-bottom: 7px solid $orange;
+						cursor: pointer;
+						}
 						a{
 						color: $white;
-						padding: 17px 20px 0px 20px;
-							&:hover{
-							border-top: 7px solid $orange;
-							}
 						}
 					}
 				}

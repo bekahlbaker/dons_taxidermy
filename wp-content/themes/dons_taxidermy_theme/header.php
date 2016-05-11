@@ -39,7 +39,7 @@
 			<h1><?php the_field('h1') ?></h1>
 		</div>
 		<div class="container-fluid">
-			<div class="row hidden-sm hidden-xs">
+			<div class="row">
 				<div class="message col-md-5 col-md-offset-1">
 					<p><?php the_field('message_1') ?><br><br><?php the_field('message_2') ?></p>
 				</div>
