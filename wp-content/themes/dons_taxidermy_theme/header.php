@@ -33,6 +33,7 @@
 		</div>
 	</div>
 <!-- hidden on page other than "home" -->
+<?php if ( is_front_page() ) { ?>
 	<div id="hiding-header">
 		<div class="h1">
 			<h1><?php the_field('h1') ?></h1>
@@ -48,6 +49,7 @@
 			</div>
 		</div> 	
 	</div>
+<?php } ?>
 <!-- end hidden -->
 </div>
 <!-- end sticky header -->
