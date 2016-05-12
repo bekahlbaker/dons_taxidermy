@@ -1,5 +1,6 @@
 footer{
 bottom: 0;
+left: 0;
 background-color: $gray; 
 height: 22vh;
 	.contact{
@@ -19,6 +20,12 @@ height: 22vh;
 				&:hover{
 				color: $orange;
 				}
+			}
+			title{
+				font-family: $body-font;
+				color: $black;
+				background: $white;
+				border: none;
 			}
 			.home{}
 			.email{}

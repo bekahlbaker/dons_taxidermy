@@ -5,7 +5,9 @@ Template Name: Contact Template
 ?>
 <?php get_header(); ?>
 
-
+<div class="contact">
+	
+</div>
 
 
 

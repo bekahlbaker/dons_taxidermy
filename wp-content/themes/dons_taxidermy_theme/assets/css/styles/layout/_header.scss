@@ -1,5 +1,4 @@
 header{
-height: 90vh;
 	.hiding{
 		.logo-bar{
 		padding-bottom: 10px;
@@ -57,7 +56,7 @@ height: 90vh;
 					padding: 10px 60px;
 					text-transform: uppercase;
 						&:hover{
-						background: rgba($orange, .5);
+						border: 2px solid $black;
 						color: $white;
 						}
 					}
