@@ -8,7 +8,7 @@ Template Name: About Template
 <div id="about">
 	<div class="container">
 		<div class="title">
-			<?php the_field('about-title'); ?>
+			<?php the_field('about_title'); ?>
 		</div>
 		<div class="row">
 			<div class="col-md-6">
