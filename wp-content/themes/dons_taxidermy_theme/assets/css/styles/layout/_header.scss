@@ -47,16 +47,17 @@ header{
 				padding-top: 40px;
 					button{
 					background: $orange;
-					border: none;
+					border: 2px solid transparent;
 					color: $white;
 					font-family: $body-font;
-					font-size: 1em;
+					font-size: 1.5em;
 					font-weight: 400;
 					letter-spacing: 3px;
-					padding: 10px 60px;
+					padding: 10px 100px;
 					text-transform: uppercase;
 						&:hover{
-						border: 2px solid $black;
+						background: transparent;
+						border: 2px solid $white;
 						color: $white;
 						}
 					}
@@ -64,6 +65,7 @@ header{
 			}
 	}
 	.sticky{
+	z-index: 999;
 		.navbar{
 		background-color: $gray;
 		border-radius: 0;
