@@ -41,12 +41,12 @@
 		</div>
 		<div class="container-fluid">
 			<div class="row">
-				<div class="message col-md-5 col-md-offset-1">
+<!-- 				<div class="message col-md-5 col-md-offset-1">
 					<p><?php the_field('message_1') ?><br><br><?php the_field('message_2') ?></p>
-				</div>
-				<div class="button col-md-6">
+				</div> -->
+<!-- 				<div class="button col-md-12">
 					<a href="<?php bloginfo('url'); ?>/my-work"><button>See My Work</button></a>
-				</div>
+				</div> -->
 			</div>
 		</div> 	
 	</div>

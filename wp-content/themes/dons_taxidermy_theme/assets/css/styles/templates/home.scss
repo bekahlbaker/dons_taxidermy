@@ -1,3 +1,33 @@
-.home{
-	
+#home{
+	padding: 20px 0;
+	.welcome{
+		padding: 10px 0;
+	}	
+
+	.header{
+			padding: 10px 0;
+			text-align: center;
+		}
+	.button{
+			text-align: center;
+	button{
+				@media (max-width: $screen-md-max) {
+					padding: 10px 50px;	
+					}
+			background-color: $orange;
+			border: 2px solid transparent;
+			color: $white;
+			font-family: $body-font;
+			font-size: 1em;
+			font-weight: 400;
+			letter-spacing: 1px;
+			padding: 10px 100px;
+			text-transform: uppercase;
+				&:hover{
+				background-color: transparent;
+				border: 2px solid $black;
+				color: $black;
+				}
+			}
+		}
 }

@@ -5,27 +5,31 @@ body{
 header{
 	.hiding{
 		.logo-bar{
-		padding-bottom: 10px;
+			padding-bottom: 10px;
 			.logo{
 				img{
-				padding-top: 30px;
-				height: 20vh;
+					padding-top: 30px;
+					height: 20vh;
 				}
 			}
 		}
 	}
 	#hiding-header{
 		.h1{
-		margin: 0px;
-		padding: 50px 0px;			
-			h1{
-			font-family: $heading-font;
-			color: $green;
-			font-weight: 900;
 			margin: 0px;
-			text-align: center;
-			padding: 20px 0px;
-			}
+			padding: 75px 0px;			
+				h1{
+					font-size: 1.75em;
+					font-family: $heading-font;
+					color: $orange;
+					font-weight: 900;
+					margin: 0px;
+					text-align: center;
+					padding: 50px 0px;
+					@media(max-width: $screen-sm-max){
+					color: $green;
+				}
+				}
 		}
 		.row{
 			text-align: center;
@@ -37,106 +41,106 @@ header{
 				}
 				.message{
 					p{
-					font-family: $body-font;
-					color: $green;
-					font-size: 1.25em;
-					font-weight: 700;
-					margin: 0px;
-					padding: 20px 0px;
-					text-align: left;
+						font-family: $body-font;
+						color: $green;
+						font-size: 1.25em;
+						font-weight: 700;
+						margin: 0px;
+						padding: 20px 0px;
+						text-align: left;
 					}
 				}
 				.button{
-				padding: 20px 0px;
-				padding-top: 40px;
+					padding: 20px 0px;
+					padding-top: 40px;
 					button{
-					background: $orange;
-					border: 2px solid transparent;
-					color: $white;
-					font-family: $body-font;
-					font-size: 1.5em;
-					font-weight: 400;
-					letter-spacing: 3px;
-					padding: 10px 100px;
-					text-transform: uppercase;
-						&:hover{
-						background: transparent;
-						border: 2px solid $white;
+						background: $orange;
+						border: 2px solid transparent;
 						color: $white;
+						font-family: $body-font;
+						font-size: 1.5em;
+						font-weight: 400;
+						letter-spacing: 3px;
+						padding: 10px 100px;
+						text-transform: uppercase;
+						&:hover{
+							background: transparent;
+							border: 2px solid $white;
+							color: $white;
 						}
 					}
 				}
 			}
 	}
 	.sticky{
-	z-index: 999;
+		z-index: 999;
 		.navbar{
-		background-color: $gray;
-		border-radius: 0;
-		margin: 0px;
-		padding: 0px;
-		text-align: center;
+			background-color: $gray;
+			border-radius: 0;
+			margin: 0px;
+			padding: 0px;
+			text-align: center;
 			.nav{
-			padding: 22px 0px;
+				padding: 22px 0px;
 				.nav-menu-desktop{
 					li{
-					display: inline;
-					font-family: $body-font;
-					font-size: 1em;
-					font-weight: 400;
-					list-style: none;
-					letter-spacing: 3px;
-					padding: 0px 50px 28px 50px;
-					text-transform: uppercase;
-						&:hover{
-						border-bottom: 7px solid $orange;
-						cursor: pointer;
-						}
-						a{
-						color: $white;
-						}
-					}
-				}
-				.nav-menu-mobile{
-				text-align: center;
-					#mobile{
-					border: none;
-					color: $black;
-					font-family: $body-font;
-					font-size: 1em;
-					font-weight: 400;
-					background: $orange;
-					cursor: pointer;
-					padding: 10px 0px;
-					text-align: left;
-					text-transform: uppercase;
-					width: 90vw;
-						span{
-						color: $black;
-						font-size: 1em;
-						padding-left: 10px;
-						padding-right: 10px;
-						}
-					}
-					.dropdown{
-						ul{
-						padding-top: 30px;
-						padding-left: 0px;
-						}
-
-						li{
+						display: inline;
 						font-family: $body-font;
 						font-size: 1em;
 						font-weight: 400;
 						list-style: none;
-						padding: 20px 0px;
-						text-transform: uppercase;
 						letter-spacing: 3px;
-							a{
+						padding: 0px 50px 28px 50px;
+						text-transform: uppercase;
+						&:hover{
+							border-bottom: 7px solid $orange;
+							cursor: pointer;
+						}
+						a{
 							color: $white;
+						}
+					}
+				}
+				.nav-menu-mobile{
+					text-align: center;
+					#mobile{
+						border: none;
+						color: $black;
+						font-family: $body-font;
+						font-size: 1em;
+						font-weight: 400;
+						background: $orange;
+						cursor: pointer;
+						padding: 10px 0px;
+						text-align: left;
+						text-transform: uppercase;
+						width: 90vw;
+						span{
+							color: $black;
+							font-size: 1em;
+							padding-left: 10px;
+							padding-right: 10px;
+						}
+					}
+					.dropdown{
+						ul{
+							padding-top: 30px;
+							padding-left: 0px;
+						}
+
+						li{
+							font-family: $body-font;
+							font-size: 1em;
+							font-weight: 400;
+							list-style: none;
+							padding: 20px 0px;
+							text-transform: uppercase;
+							letter-spacing: 3px;
+							a{
+								color: $white;
 
 								&:hover{
-								color: $orange;
+									color: $orange;
 								}
 							}
 						}

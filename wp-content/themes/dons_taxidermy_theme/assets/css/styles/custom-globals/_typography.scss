@@ -28,7 +28,8 @@ html{
 p{
 	color: $black;
 	font-family: $body-font;
-	font-size: 1em;
+	font-size: 1.25em;
+	font-weight: 400;
 }
 
 h1{
@@ -44,6 +45,7 @@ h1{
 	}
 }
 h2{
+	color: $black;
 	font-family: $heading-font;
 	font-size: 2.25em;
 	@media(min-width: $screen-sm-min) and (max-width: $screen-sm-max){
