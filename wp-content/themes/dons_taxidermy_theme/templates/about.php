@@ -28,7 +28,7 @@ Template Name: About Template
 		</div>
 	</div>
 	<div class="navigation">
-		<a href=""><button>See My Work</button></a>	
+		<a href="<?php bloginfo('url'); ?>/my-work"><button>See My Work</button></a>	
 	</div>
 </div>
 

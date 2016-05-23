@@ -45,7 +45,7 @@
 					<p><?php the_field('message_1') ?><br><br><?php the_field('message_2') ?></p>
 				</div>
 				<div class="button col-md-6">
-					<a href=""><button>See My Work</button></a>
+					<a href="<?php bloginfo('url'); ?>/my-work"><button>See My Work</button></a>
 				</div>
 			</div>
 		</div> 	

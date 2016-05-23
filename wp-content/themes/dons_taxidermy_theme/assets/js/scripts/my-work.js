@@ -2,8 +2,15 @@
     'use strict';
 
 
-$(function() {
-    $('.gallery_item').matchHeight(options);
-});
+// $(function() {
+//     $('img').matchHeight();
+// });
     
+$(function() {
+		$('.pop').on('click', function() {
+			$('.imagepreview').attr('src', $(this).find('img').attr('src'));
+			$('#imagemodal').modal('show');   
+		});		
+});
+
 }(jQuery);

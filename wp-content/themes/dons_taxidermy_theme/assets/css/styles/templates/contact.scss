@@ -1,3 +1,40 @@
-.contact{
+#contact{
+	.title{
+		color: $black;
+		font-family: $heading-font;
+		font-size: 2.75em;
+		padding-top: 50px;
+		text-align: center;
+		}
+}
 
+.contact{
+	padding-bottom: 50px;
+	padding-top: 50px;
+	.contact-col{
+		.contact-form{
+			#ninja_forms_field_4{
+				@media (max-width: $screen-md-max) {
+					padding: 10px 50px;	
+					}
+			background-color: $orange;
+			border: 2px solid transparent;
+			color: $white;
+			font-family: $body-font;
+			font-size: 1.5em;
+			font-weight: 400;
+			letter-spacing: 3px;
+			padding: 10px 100px;
+			text-transform: uppercase;
+				&:hover{
+				background-color: transparent;
+				border: 2px solid $black;
+				color: $black;
+				}
+			}
+		}
+		.second{
+			text-align: center;
+		}
+	}
 }
