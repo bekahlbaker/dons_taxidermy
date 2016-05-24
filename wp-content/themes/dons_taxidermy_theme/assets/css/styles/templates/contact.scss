@@ -23,6 +23,10 @@
 	.contact-col{
 		.contact-form{
 			margin-right: 15px;
+			.ninja-forms-all-fields-wrap{
+				font-family: $body-font!important;
+				font-weight: 500;
+			}
 			#ninja_forms_field_4{
 				@media (max-width: $screen-md-max) {
 					padding: 10px 50px;	
