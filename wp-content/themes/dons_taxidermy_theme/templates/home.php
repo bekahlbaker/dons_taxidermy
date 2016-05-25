@@ -29,20 +29,30 @@ Template Name: Home Template
 		<hr>
 		<div class="my-work">
 			<h2 class="header"><?php the_field('my_work_click') ?></h2>
-			<div class="my-slider">
+			<div class="featured">
+				<div class="row">
+					<div class="col-md-4 featured_image">
+						<?php if( get_field('featured_1') ): ?>
 
-					<div id="slider">
-					  <a href="javascript://" class="control_next">>></a>
-					  <a href="javascript://" class="control_prev"><</a>
-					  <ul>
-					    <li style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/img/forest2.jpg); background-size: cover; background-position: center;"></li>
-					    <li style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/img/forest.jpg); background-size: cover; background-position: center;"></li>
-					    <li style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/img/forest3.jpg); background-size: cover; background-position: center;"></li>
-					    <li style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/img/301H.jpg); background-size: cover; background-position: center;"></li>
-					  </ul>  
+							<img src="<?php the_field('featured_1'); ?>" />
+
+						<?php endif; ?>
 					</div>
+					<div class="col-md-4 featured_image">
+						<?php if( get_field('featured_2') ): ?>
 
-				
+							<img src="<?php the_field('featured_2'); ?>" />
+
+						<?php endif; ?>
+					</div>
+					<div class="col-md-4 featured_image">
+						<?php if( get_field('featured_3') ): ?>
+
+							<img src="<?php the_field('featured_3'); ?>" />
+
+						<?php endif; ?>
+					</div>
+				</div>
 			</div>
 			<div class="message">
 				<?php the_field('my_work_short_message') ?>

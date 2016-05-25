@@ -39,6 +39,24 @@ Template Name: Contact Template
 				</div>
 			</div>
 		</div>
+			<div class="container">
+				<div class="price-list">
+					<div class="price-message">
+						<p>Budgets and dream-mounts are different for everyone, so the best thing to do is give me a call; however, I've included a price list of the basics... so you have a rough idea of what you're looking at.</p>
+						<button class="button" id="price">See Prices</button>
+					</div>
+					<div class="modal fade" id="priceModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					  <div class="modal-dialog">
+					    <div class="modal-content">              
+					      <div class="modal-body">
+					      	<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					        <p> <?php the_field('price_list') ?> </p>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+				</div>
+			</div>
 	</div>
 </div>
 

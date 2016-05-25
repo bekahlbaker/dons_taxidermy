@@ -58,3 +58,48 @@
 		}
 	}
 }
+
+.price-list{
+		text-align: center;
+		padding: 50px;
+
+		.button{
+
+				@media (max-width: $screen-md-max) {
+					padding: 10px 50px;	
+					}
+			background-color: $orange;
+			border: 2px solid transparent;
+			color: $white;
+			font-family: $body-font;
+			font-size: 1em;
+			font-weight: 400;
+			letter-spacing: 1px;
+			padding: 10px 100px;
+			text-transform: uppercase;
+				&:hover{
+				background-color: transparent;
+				border: 2px solid $black;
+				color: $black;
+				}
+		}
+		.modal-body{
+			background: $white;
+
+			.close{
+				opacity: 1!important;
+					&:hover{
+						opacity: 1!important;
+					}
+			}
+			span{
+				color: $orange;
+				font-size: 2em;
+				opacity: 1!important;	
+				text-shadow: 1px 2px 0 $gray;	
+					&:hover{
+						opacity: 1!important;
+						text-shadow: 1px 5px 0 $gray;					}		
+				}
+		}
+	}
