@@ -4,6 +4,7 @@ body{
 
 header{
 	.hiding{
+	
 		.logo-bar{
 			padding-bottom: 10px;
 			.logo{
@@ -17,7 +18,10 @@ header{
 	#hiding-header{
 		.h1{
 			margin: 0px;
-			padding: 75px 0px;			
+			padding: 75px 0px 50px 0px;
+							@media(max-width: $screen-sm-max){
+				padding: 75px 0 0 0;
+			}			
 				h1{
 					font-size: 1.75em;
 					font-family: $heading-font;
@@ -26,17 +30,16 @@ header{
 					margin: 0px;
 					text-align: center;
 					padding: 50px 0px;
-					@media(max-width: $screen-sm-max){
-					color: $green;
-				}
+									@media(max-width: $screen-sm-max){
+			padding: 50px 0 25px 0;
+			}
+					
 				}
 		}
 		.row{
 			text-align: center;
 			padding: 10px 20px 40px 20px;
-			@media(max-width: $screen-sm-max){
-				display: none;
-			}
+
 				.col-md-6{
 				}
 				.message{
@@ -61,12 +64,16 @@ header{
 						font-size: 1.5em;
 						font-weight: 400;
 						letter-spacing: 3px;
-						padding: 10px 100px;
+						padding: 5px 100px;
 						text-transform: uppercase;
+						text-align: center;
 						&:hover{
 							background: transparent;
-							border: 2px solid $white;
-							color: $white;
+							border: 2px solid $green;
+							color: $green;
+						}
+						span{
+							font-size: 1.5em;
 						}
 					}
 				}

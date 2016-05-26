@@ -1,21 +1,12 @@
 #home{
 	padding: 20px 0;
-	text-align: center;
 	.home{
-		padding: 0px 150px;
-		@media (max-width: $screen-sm-max) {
-			padding: 0px 50px;	
-		}
-		@media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
-			padding: 0px 100px;	
-		}
+		padding: 0px 50px;
+
 	}
 	.welcome{
 		padding: 10px 0;
-			p{
-				font-weight: 400;
-				font-size: 1.75em;
-			}
+
 	}	
 
 	.header{
@@ -48,7 +39,7 @@
 .featured{
 	text-align: center;
 	img{
-		max-width: 200px;
+		max-width: 100px;
 		border-radius: 20px;
 		margin: 20px 0px;
 	}

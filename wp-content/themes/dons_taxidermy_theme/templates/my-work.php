@@ -6,16 +6,18 @@ Template Name: My Work Template
 <?php get_header(); ?>
 
 <div id="work">
-	<div class="container-fluid">
-		<div class="title">
-			<?php the_field('work_title'); ?>
-		</div>
+	<div class="container">
+		<div class="content-block">
+				<?php if (have_posts()) : while (have_posts()) : the_post();?>
+				<?php the_content(); ?>
+				<?php endwhile; endif; ?>
+				</div>
 		<div class="gallery">
 
 <?php if(have_rows('gallery_entry')) : ?>
 			<ul class="row">
 				<?php while(have_rows('gallery_entry')) : the_row(); ?>
-					<li class="gallery_item pop">
+					<li class="gallery_item pop col-md-4">
 					<div class="gallery_img" style="background-image: url('<?php the_sub_field('image'); ?>') ;"></div>
 						<img src="<?php the_sub_field('image'); ?>">
 						<div class="description">

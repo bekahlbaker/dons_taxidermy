@@ -5,8 +5,8 @@ Template Name: About Template
 ?>
 <?php get_header();  ?>
 
-<div id="about">
-	<div class="container">
+<div id="about" style="background-image: url('<?php bloginfo('template_directory'); ?>/assets/img/bg.jpg') ; background-size: cover; background-repeat: no-repeat; background-position: center center;">
+	<div class="container" style="background:rgba(255, 255, 255, 0.5);">
 		<div class="title">
 			<?php the_field('about_title'); ?>
 		</div>

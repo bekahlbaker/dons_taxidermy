@@ -35,18 +35,15 @@
 	</div>
 <!-- hidden on page other than "home" -->
 <?php if ( is_front_page() ) { ?>
-	<div id="hiding-header">
+	<div id="hiding-header" style="height: 80vh;">
 		<div class="h1">
 			<h1><?php the_field('h1') ?></h1>
 		</div>
 		<div class="container-fluid">
 			<div class="row">
-<!-- 				<div class="message col-md-5 col-md-offset-1">
-					<p><?php the_field('message_1') ?><br><br><?php the_field('message_2') ?></p>
-				</div> -->
-<!-- 				<div class="button col-md-12">
-					<a href="<?php bloginfo('url'); ?>/my-work"><button>See My Work</button></a>
-				</div> -->
+ 				<div class="button col-md-12">
+					<a href="#anchor" class="smoothScroll"><button><span class="glyphicon glyphicon-chevron-down"></span></button></a>
+				</div> 
 			</div>
 		</div> 	
 	</div>
@@ -54,7 +51,7 @@
 <!-- end hidden -->
 </div>
 <!-- end sticky header -->
-
+<div id="anchor"></div>
 <!-- sticky navbar -->
 <div class="sticky">
 	<div class="navbar">

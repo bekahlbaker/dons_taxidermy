@@ -5,8 +5,27 @@ Template Name: Home Template
 ?>
 <?php get_header(); ?>
 
-<div id="home">
-	<div class="container home">
+<div id="home" style="background-image: url('<?php bloginfo('template_directory'); ?>/assets/img/bg.jpg') ; background-size: cover; background-repeat: no-repeat; background-position: center center;">
+	<div class="container-fluid home">
+		<div class="welcome">
+			<img src="<?php bloginfo('template_directory'); ?>/assets/img/hunter.png" alt="" style="width: 200px; float: left;">
+			<h2 class="header"><?php the_field('welcome') ?></h2>
+			<div class="message">
+				<?php the_field('welcome_short_message') ?>
+			</div>
+			<img src="<?php bloginfo('template_directory'); ?>/assets/img/hunter.png" alt="" style="width: 200px; float: right;">
+			<div class="message">
+					<?php the_field('about_short_message') ?>
+			
+			</div>
+			<div class="button">
+				<a href="<?php bloginfo('url'); ?>/about"><button>Read More</button></a>
+			</div>
+		</div>
+	
+
+
+<!-- 
 		<div class="welcome">
 			<h2 class="header"><?php the_field('welcome') ?></h2>
 			<div class="message">
@@ -26,8 +45,15 @@ Template Name: Home Template
 				<a href="<?php bloginfo('url'); ?>/about"><button>Read More</button></a>
 			</div>
 		</div>
-		<hr>
-		<div class="my-work">
+ -->
+
+
+		<hr style="border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);">
+	<div class="row">
+		<div class="my-work col-md-6">
 			<h2 class="header"><?php the_field('my_work_click') ?></h2>
 			<div class="featured">
 				<div class="row">
@@ -58,11 +84,11 @@ Template Name: Home Template
 				<?php the_field('my_work_short_message') ?>
 			</div>
 			<div class="button">
-				<a href="<?php bloginfo('url'); ?>/my-work"><button>Read More</button></a>
+				<a href="<?php bloginfo('url'); ?>/my-work"><button>See More</button></a>
 			</div>
 		</div>
-		<hr>
-		<div class="contact_me">
+		
+		<div class="contact_me col-md-6">
 			<h2 class="header"><?php the_field('contact_me_click') ?></h2>
 			<div class="message">
 				<p><?php the_field('contact_me_short_message') ?></p>
@@ -71,6 +97,7 @@ Template Name: Home Template
 				<a href="<?php bloginfo('url'); ?>/contact"><button>Read More</button></a>
 			</div>
 		</div>
+	</div>
 	</div>
 </div>
 
