@@ -1,48 +1,122 @@
 #home{
-	padding: 20px 0;
-	.home{
-		padding: 0px 50px;
-
+	.title{
+		text-align: center;
 	}
-	.welcome{
-		padding: 10px 0;
+	.curve { 
+	  	width: 33%; height: auto;
+	  	min-width: 200px;
+	  	float: right;
+	  	margin-left:4rem; 
+	  	border-radius: 50%;
+	  	-webkit-shape-outside:circle();
+	  	shape-outside:circle();
+	}
 
+	p{
+	  text-align: right;
 	}	
 
-	.header{
-			padding: 10px 0;
-		}
-	.message{
-		padding: 20px 0;
+	.navigation{
+		text-align: center;
 	}
-	.button{
-	button{
-				@media (max-width: $screen-md-max) {
-					padding: 10px 50px;	
-					}
-			background-color: $orange;
-			border: 2px solid transparent;
-			color: $white;
-			font-family: $body-font;
-			font-size: 1em;
-			font-weight: 400;
-			letter-spacing: 1px;
-			padding: 10px 100px;
-			text-transform: uppercase;
-				&:hover{
-				background-color: transparent;
-				border: 2px solid $black;
-				color: $black;
-				}
+
+	#slanted{
+		height: 40vh;
+		background-position: center center!important;
+		background-repeat: no-repeat;
+		background-size: 100%;
+			:before {
+			    content: "";
+			    background: blue;
+			    height: 40px;
+			    transform: skewY(2deg);
+			    position: absolute;
+			    left: 0;
+			    right: 0;
+			    z-index: -1;
 			}
-		}
-.featured{
-	text-align: center;
-	img{
-		max-width: 100px;
-		border-radius: 20px;
-		margin: 20px 0px;
+
+			:before{    
+			    top: -20px;    
+			}
 	}
 }
 
-}
+
+
+
+
+
+
+
+
+
+// #home{
+// 	padding: 20px 0;
+// 	.home{
+// 		padding: 0px 50px;
+
+// 	}
+// 	.welcome{
+// 		padding: 10px 0;
+// 		background: $white;
+// 		.welcome:after{
+// 			 transform: skewY(20deg);
+// 		}
+
+// 	}
+// 	.slanted {
+//     box-sizing: border-box;
+//     position: relative;
+//     padding: 20px;
+
+//     .slanted:after {
+//     transform: skewY(5deg);
+//     position: absolute;
+//     left: 0;
+//     right: 0;
+//     z-index: -1;
+// }
+
+// .slanted:after {
+//     bottom: -20px;
+// }
+// }	
+
+// 	.header{
+// 			padding: 10px 0;
+// 		}
+// 	.message{
+// 		padding: 20px 0;
+// 	}
+// 	.button{
+// 	button{
+// 				@media (max-width: $screen-md-max) {
+// 					padding: 10px 50px;	
+// 					}
+// 			background-color: $orange;
+// 			border: 2px solid transparent;
+// 			color: $white;
+// 			font-family: $body-font;
+// 			font-size: 1em;
+// 			font-weight: 400;
+// 			letter-spacing: 1px;
+// 			padding: 10px 100px;
+// 			text-transform: uppercase;
+// 				&:hover{
+// 				background-color: transparent;
+// 				border: 2px solid $black;
+// 				color: $black;
+// 				}
+// 			}
+// 		}
+// .featured{
+// 	text-align: center;
+// 	img{
+// 		max-width: 100px;
+// 		border-radius: 20px;
+// 		margin: 20px 0px;
+// 	}
+// }
+
+// }

@@ -5,8 +5,12 @@ Template Name: About Template
 ?>
 <?php get_header();  ?>
 
-<div id="about" style="background-image: url('<?php bloginfo('template_directory'); ?>/assets/img/bg.jpg') ; background-size: cover; background-repeat: no-repeat; background-position: center center;">
-	<div class="container" style="background:rgba(255, 255, 255, 0.5);">
+<div id="about" style="background-image: url('<?php bloginfo('template_directory'); ?>/assets/img/lake.jpg') ; background-size: cover; background-repeat: no-repeat; background-position: center center;">
+	<div class="container" style="  background-image:
+    linear-gradient(
+      to bottom right, 
+     rgba(255,255,255,0.5), transparent
+    );">
 		<div class="title">
 			<?php the_field('about_title'); ?>
 		</div>

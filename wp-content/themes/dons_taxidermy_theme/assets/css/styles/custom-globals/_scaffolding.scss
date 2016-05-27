@@ -5,6 +5,10 @@
 	padding: 50px 0;
 }
 
+.container{
+	padding: 30px;
+}
+
 .container-fluid{
 		margin: 0;
 		padding: 0;
@@ -19,4 +23,37 @@
 	max-height: 300px;
 	max-width: 300px;
 }
+
+button.ghost{
+	background: $orange;
+	border: 1px solid $orange;
+	color: $black!important;
+	font-family: $body-font;
+	font-size: 1.25em!important;
+	font-weight: 300!important;
+	letter-spacing: 2px!important;
+	padding: 10px 50px!important;
+	text-transform: uppercase;
+	text-align: center;
+		@media (max-width: $screen-md-max) {
+			padding: 5px 25px!important;	
+		}
+		&:hover{
+			background: transparent;
+			border: 1px solid $black;
+		}		
+}
+.header{
+	padding: 20px 0;
+}
+
+hr{
+	border-top: 1px solid $orange;
+	padding: 10px;
+}
+
+.message{
+	padding: 20px 0;
+}
+
 

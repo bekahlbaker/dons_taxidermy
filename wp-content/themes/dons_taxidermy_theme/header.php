@@ -24,33 +24,21 @@
 
 <!--<![endif]-->
 <header>
-<!-- sticky header -->
-<div class="hiding" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/img/mountain-white-space.png);background-size: cover; ">
+<div class="header" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/img/mountain-white-space.png);background-size: cover; ">
 	<div class="logo-bar">
 		<div class="container">
-			<div class="logo">
-				<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_directory'); ?>/assets/img/logo.png"></a>
-			</div>
+			<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_directory'); ?>/assets/img/logo.png"></a>
 		</div>
 	</div>
-<!-- hidden on page other than "home" -->
-<?php if ( is_front_page() ) { ?>
-	<div id="hiding-header" style="height: 80vh;">
+	<div id="hiding-header">
 		<div class="h1">
 			<h1><?php the_field('h1') ?></h1>
 		</div>
-		<div class="container-fluid">
-			<div class="row">
- 				<div class="button col-md-12">
-					<a href="#anchor" class="smoothScroll"><button><span class="glyphicon glyphicon-chevron-down"></span></button></a>
-				</div> 
-			</div>
-		</div> 	
+ 		<div class="button">
+			<a href="#anchor" class="smoothScroll"><button><span class="glyphicon glyphicon-chevron-down"></span></button></a>
+		</div> 
 	</div>
-<?php } ?>
-<!-- end hidden -->
 </div>
-<!-- end sticky header -->
 <div id="anchor"></div>
 <!-- sticky navbar -->
 <div class="sticky">

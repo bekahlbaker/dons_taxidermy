@@ -5,9 +5,29 @@ Template Name: Home Template
 ?>
 <?php get_header(); ?>
 
+<div id="home">
+	<div class="container welcome">
+		<div class="title">
+			<h2 class="header"><?php the_field('welcome') ?></h2>
+		</div>
+		<hr>
+	  	<img src="<?php bloginfo('template_directory'); ?>/assets/img/hunter.png" alt="" class="curve">
+		<?php the_field('welcome_short_message') ?>
+		<div class="navigation">
+			<a href=""><button class="ghost">see my work</button></a>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div id="slanted" style="background-image: url('<?php bloginfo('template_directory'); ?>/assets/img/woodbg2.jpg');"></div>
+	</div>
+</div>
+
+
+<!-- 
+
 <div id="home" style="background-image: url('<?php bloginfo('template_directory'); ?>/assets/img/bg.jpg') ; background-size: cover; background-repeat: no-repeat; background-position: center center;">
 	<div class="container-fluid home">
-		<div class="welcome">
+		<div class="welcome slanted">
 			<img src="<?php bloginfo('template_directory'); ?>/assets/img/hunter.png" alt="" style="width: 200px; float: left;">
 			<h2 class="header"><?php the_field('welcome') ?></h2>
 			<div class="message">
@@ -24,35 +44,15 @@ Template Name: Home Template
 		</div>
 	
 
-
-<!-- 
-		<div class="welcome">
-			<h2 class="header"><?php the_field('welcome') ?></h2>
-			<div class="message">
-				<?php the_field('welcome_short_message') ?>
-			</div>
-		</div>
-		<hr>
-		<div class="about">
-			<h2 class="header"><?php the_field('about_click') ?></h2>
-			
-				<img src="<?php bloginfo('template_directory'); ?>/assets/img/hunter.png" alt="" style="width: 200px;">
-				<div class="message">
-					<?php the_field('about_short_message') ?>
-			
-			</div>
-			<div class="button">
-				<a href="<?php bloginfo('url'); ?>/about"><button>Read More</button></a>
-			</div>
-		</div>
- -->
-
-
 		<hr style="border: 0;
     height: 1px;
     background: #333;
     background-image: linear-gradient(to right, #ccc, #333, #ccc);">
-	<div class="row">
+	<div class="row" style="  background-image:
+    linear-gradient(
+      to bottom right, 
+     rgba(255,255,255,0.5), transparent
+    );">
 		<div class="my-work col-md-6">
 			<h2 class="header"><?php the_field('my_work_click') ?></h2>
 			<div class="featured">
@@ -99,9 +99,10 @@ Template Name: Home Template
 		</div>
 	</div>
 	</div>
-</div>
+</div> -->
 
 <?php get_footer(); ?>
+
 
 
 
