@@ -6,22 +6,47 @@ Template Name: Home Template
 <?php get_header(); ?>
 
 <div id="home">
-	<div class="container welcome">
-		<div class="title">
-			<h2 class="header"><?php the_field('welcome') ?></h2>
-		</div>
-		<hr>
-	  	<img src="<?php bloginfo('template_directory'); ?>/assets/img/hunter.png" alt="" class="curve">
-		<?php the_field('welcome_short_message') ?>
-		<div class="navigation">
-			<a href=""><button class="ghost">see my work</button></a>
+	<div class="slant-bottom-right">
+		<div class="container-fluid">
+			<section>
+				<div class="title">
+					<h2 class="header"><?php the_field('welcome') ?></h2>
+				</div>
+				<hr>
+				<img src="<?php bloginfo('template_directory'); ?>/assets/img/hunter.png" alt="" class="curve">
+			  	<div class="message">
+					<?php the_field('welcome_short_message') ?>
+				</div>
+				<div class="navigation">
+					<a href=""><button class="ghost">see my work</button></a>
+				</div>
+			</section>
 		</div>
 	</div>
-	<div class="container-fluid">
-		<div id="slanted" style="background-image: url('<?php bloginfo('template_directory'); ?>/assets/img/woodbg2.jpg');"></div>
-	</div>
-</div>
 
+	<div class="container-fluid">
+		<div id="break" style="background-image: url('<?php bloginfo('template_directory'); ?>/assets/img/woodbg2.jpg');"></div>
+	</div>
+
+		<div class="slant-top-right">
+		<div class="container-fluid">
+			<section>
+				<div class="title">
+					<h2 class="header"><?php the_field('welcome') ?></h2>
+				</div>
+				<hr>
+				<img src="<?php bloginfo('template_directory'); ?>/assets/img/hunter.png" alt="" class="curve">
+			  	<div class="message">
+					<?php the_field('welcome_short_message') ?>
+				</div>
+				<div class="navigation">
+					<a href=""><button class="ghost">see my work</button></a>
+				</div>
+			</section>
+		</div>
+	</div>
+
+</div>
 
 <!-- 
 
