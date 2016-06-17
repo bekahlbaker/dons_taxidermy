@@ -962,7 +962,8 @@ jQuery(document).ready(function($){
 						<li>
 							<label for="video_autoplay">Video Autoplay</label>
 							<input type="hidden" value="off" name="video_autoplay" />					
-							<input type="checkbox" name="video_autoplay"  value="on" id="video_autoplay"  <?php if($row->video_autoplay  == 'on'){ echo 'checked="checked"'; } ?> />
+                                                        <input type="checkbox" name="video_autoplay"  value="on" id="video_autoplay"  disabled="disabled" />
+                                                        <a class="probuttonlink" href="http://huge-it.com/slider/" target="_blank">( <span style="color: red;font-size: 14px;"> PRO </span> )</a>
 						</li>	
                                                 <!--###########RANDOM UPDATE##############-->
                                                 <li>

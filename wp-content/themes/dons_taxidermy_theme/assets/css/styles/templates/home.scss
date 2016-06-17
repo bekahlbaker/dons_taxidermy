@@ -36,15 +36,15 @@
 	  content: '';
 	  position: absolute;
 	  right: 0;
-	  top: -55px;
+	  top: -70px;
 	  width: 100%;
 	  height: 20vh;
 	  background: $brown;
-	  -webkit-transform: skewY(-5deg);
-	  -moz-transform: skewY(-5deg);
-	  -ms-transform: skewY(-5deg);
-	  -o-transform: skewY(-5deg);
-	  transform: skewY(-5deg);
+	  -webkit-transform: skewY(-3deg);
+	  -moz-transform: skewY(-3deg);
+	  -ms-transform: skewY(-3deg);
+	  -o-transform: skewY(-3deg);
+	  transform: skewY(-3deg);
 	  -webkit-backface-visibility: hidden;
 	}
 
@@ -57,15 +57,57 @@
 	  content: '';
 	  position: absolute;
 	  left: 0;
-	  bottom: -55px;
+	  bottom: -70px;
 	  width: 100%;
 	  height: 20vh;
 	  background: $brown;
-	  -webkit-transform: skewY(5deg);
-	  -moz-transform: skewY(5deg);
-	  -ms-transform: skewY(5deg);
-	  -o-transform: skewY(5deg);
-	  transform: skewY(5deg);
+	  -webkit-transform: skewY(3deg);
+	  -moz-transform: skewY(3deg);
+	  -ms-transform: skewY(3deg);
+	  -o-transform: skewY(3deg);
+	  transform: skewY(3deg);
+	  -webkit-backface-visibility: hidden;
+	}
+
+	.slant-top-left {
+	  background: $brown;
+	  position: relative;
+	}
+
+	.slant-top-left:before{
+	  content: '';
+	  position: absolute;
+	  left: 0;
+	  top: -70px;
+	  width: 100%;
+	  height: 20vh;
+	  background: $brown;
+	  -webkit-transform: skewY(3deg);
+	  -moz-transform: skewY(3deg);
+	  -ms-transform: skewY(3deg);
+	  -o-transform: skewY(3deg);
+	  transform: skewY(3deg);
+	  -webkit-backface-visibility: hidden;
+	}
+
+	.slant-bottom-left {
+	  background: $brown;
+	  position: relative;
+	}
+
+	.slant-bottom-left:after{
+	  content: '';
+	  position: absolute;
+	  right: 0;
+	  bottom: -70px;
+	  width: 100%;
+	  height: 20vh;
+	  background: $brown;
+	  -webkit-transform: skewY(-3deg);
+	  -moz-transform: skewY(-3deg);
+	  -ms-transform: skewY(-3deg);
+	  -o-transform: skewY(-3deg);
+	  transform: skewY(-3deg);
 	  -webkit-backface-visibility: hidden;
 	}
 
@@ -76,10 +118,15 @@
 	}
 
 	#break{
-		height: 40vh;
+		height: 30vh;
 		background-position: center center!important;
 		background-repeat: no-repeat;
 		background-size: 100%;
+
+		@media (min-width: $screen-md-min)  {
+			height: 40vh;
+			background-attachment: fixed;
+		}
 	}
 
 	.curve-left { 
@@ -95,83 +142,150 @@
 	  	shape-outside:circle();
 	}
 
+	.contact-me{
+	padding-bottom: 50px;
+	padding-top: 40px;
+
+	h4{
+		padding: 25px 0px;
+		text-align: center;
+	}
+	.contact-col{
+		.contact-form{
+			margin-right: 15px;
+			.ninja-forms-all-fields-wrap{
+				font-family: $body-font!important;
+				font-weight: 500;
+			}
+			#ninja_forms_field_4{
+				@media (max-width: $screen-md-max) {
+					padding: 10px 50px;	
+					}
+					background: $orange;
+					border: 1px solid $orange;
+					color: $black!important;
+					font-family: $body-font;
+					font-size: 1.25em!important;
+					font-weight: 300!important;
+					letter-spacing: 2px!important;
+					padding: 10px 50px!important;
+					text-transform: uppercase;
+					text-align: center;
+						@media (max-width: $screen-md-max) {
+							padding: 5px 25px!important;	
+						}
+						&:hover{
+							background: transparent;
+							border: 1px solid $black;
+						}		
+			}
+		}
+		.second{
+			margin-left: 15px;
+			.call{
+				padding: 0px 0px 25px 0px;
+			}
+			.directions{
+				padding: 25px 0px 50px 0px;
+			}
+		}
+	}
 }
 
+.price-list{
+		text-align: center;
+		padding: 50px;
+
+		.button{
+
+				@media (max-width: $screen-md-max) {
+					padding: 10px 50px;	
+					}
+			background-color: $orange;
+			border: 2px solid transparent;
+			color: $white;
+			font-family: $body-font;
+			font-size: 1em;
+			font-weight: 400;
+			letter-spacing: 1px;
+			padding: 10px 100px;
+			text-transform: uppercase;
+				&:hover{
+				background-color: transparent;
+				border: 2px solid $black;
+				color: $black;
+				}
+		}
+		.modal-body{
+			background: $white;
+
+			.close{
+				opacity: 1!important;
+					&:hover{
+						opacity: 1!important;
+					}
+			}
+			span{
+				color: $orange;
+				font-size: 2em;
+				opacity: 1!important;	
+				text-shadow: 1px 2px 0 $gray;	
+					&:hover{
+						opacity: 1!important;
+						text-shadow: 1px 5px 0 $gray;					}		
+				}
+		}
+	}
 
 
+.gallery{
+		text-align: center;
+		padding: 50px;
+
+		.button{
+
+				@media (max-width: $screen-md-max) {
+					padding: 10px 50px;	
+					}
+			background-color: $orange;
+			border: 2px solid transparent;
+			color: $white;
+			font-family: $body-font;
+			font-size: 1em;
+			font-weight: 400;
+			letter-spacing: 1px;
+			padding: 10px 100px;
+			text-transform: uppercase;
+				&:hover{
+				background-color: transparent;
+				border: 2px solid $black;
+				color: $black;
+				}
+		}
+		.modal-body{
+			background: $white;
+
+			.close{
+				opacity: 1!important;
+					&:hover{
+						opacity: 1!important;
+					}
+			}
+			span{
+				color: $orange;
+				font-size: 2em;
+				opacity: 1!important;	
+				text-shadow: 1px 2px 0 $gray;	
+					&:hover{
+						opacity: 1!important;
+						text-shadow: 1px 5px 0 $gray;					}		
+				}
+		}
+	}
 
 
+}
 
-
-
-
-
-// #home{
-// 	padding: 20px 0;
-// 	.home{
-// 		padding: 0px 50px;
-
-// 	}
-// 	.welcome{
-// 		padding: 10px 0;
-// 		background: $white;
-// 		.welcome:after{
-// 			 transform: skewY(20deg);
-// 		}
-
-// 	}
-// 	.slanted {
-//     box-sizing: border-box;
-//     position: relative;
-//     padding: 20px;
-
-//     .slanted:after {
-//     transform: skewY(5deg);
-//     position: absolute;
-//     left: 0;
-//     right: 0;
-//     z-index: -1;
-// }
-
-// .slanted:after {
-//     bottom: -20px;
-// }
-// }	
-
-// 	.header{
-// 			padding: 10px 0;
-// 		}
-// 	.message{
-// 		padding: 20px 0;
-// 	}
-// 	.button{
-// 	button{
-// 				@media (max-width: $screen-md-max) {
-// 					padding: 10px 50px;	
-// 					}
-// 			background-color: $orange;
-// 			border: 2px solid transparent;
-// 			color: $white;
-// 			font-family: $body-font;
-// 			font-size: 1em;
-// 			font-weight: 400;
-// 			letter-spacing: 1px;
-// 			padding: 10px 100px;
-// 			text-transform: uppercase;
-// 				&:hover{
-// 				background-color: transparent;
-// 				border: 2px solid $black;
-// 				color: $black;
-// 				}
-// 			}
-// 		}
-// .featured{
-// 	text-align: center;
-// 	img{
-// 		max-width: 100px;
-// 		border-radius: 20px;
-// 		margin: 20px 0px;
-// 	}
-// }
-
-// }
+.modal-backdrop{
+	position: absolute;
+}

@@ -5,8 +5,11 @@ $('.dropdown').hide();
 
 $( "#mobile" ).click(function() {
   $( ".dropdown" ).toggle(function() {
-    // Animation complete.
   });
+});
+
+$(".menu-item").click(function() {
+	$(".dropdown").hide();
 });
 
 var stickyOffset = $('.sticky').offset().top;

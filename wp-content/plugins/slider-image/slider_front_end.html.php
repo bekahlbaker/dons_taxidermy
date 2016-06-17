@@ -33,11 +33,20 @@ $GLOBALS['thumbnail_width']=$sliderwidth;
 $GLOBALS['changespeed']=$slider[0]->param;
 ?>
 <script>
+    var pausehover="<?php echo $sliderpauseonhover;?>";
 	var huge_video_playing={};
 	var autoplayMatch={};
-	
-	
-
+    var scrolling;
+    if(pausehover == 'on'){
+        scrolling = false;
+    }else{
+        scrolling = true;
+    }
+    jQuery(window).load(function(){
+        setTimeout(function(){
+            jQuery('.huge_it_slide_container_<?php echo $sliderID; ?>').mouseleave();
+        }, 100);
+    });
 </script>
 
 
@@ -856,65 +865,28 @@ $GLOBALS['changespeed']=$slider[0]->param;
 
 		var staticsliderwidth=<?php echo $sliderwidth;?>;
 		var sliderwidth=<?php echo $sliderwidth;?>;
-		
-		var thumbWidth=jQuery(".huge_it_slideshow_thumbnails_<?php echo $sliderID; ?>").width();
-		
-		//alert(thumbHeight)
-		//alert(thumbWidth/2)
 		var bodyWidth=jQuery(window).width();
-        var parentWidth = jQuery(".huge_it_slideshow_image_wrap_<?php echo $sliderID; ?>").parent().width();
-		//if responsive js late responsive.js @  take body size and not parent div
-		jQuery(".huge_it_slideshow_thumbnails_<?php echo $sliderID; ?>").css({height: <?php echo $paramssld['slider_thumb_height']; ?>});
+                var parentWidth = jQuery(".huge_it_slideshow_image_wrap_<?php echo $sliderID; ?>").parent().width();
+		
 		if(sliderwidth>parentWidth){sliderwidth=parentWidth;}
 		if(sliderwidth>bodyWidth){sliderwidth=bodyWidth;}
 		var str=(<?php echo $sliderheight;?>/staticsliderwidth); 
 		
-			
-			jQuery(".huge_it_slideshow_thumbnails_<?php echo $sliderID; ?>").css({width: thumbWidth});
-			
-				var str2=(<?php echo $paramssld['slider_thumb_height']; ?>/staticthumbWidth);
-			
-			jQuery(".huge_it_slideshow_thumbnails_<?php echo $sliderID; ?>").css({height: thumbWidth*str2});
-			jQuery(".bx-viewport").css({height: thumbWidth*str2});
-			
-			
-			
-		
-		
-		
-		jQuery(".huge_it_slideshow_image_wrap_<?php echo $sliderID; ?>").css({width: (sliderwidth)});
-		jQuery(".huge_it_slideshow_image_wrap_<?php echo $sliderID; ?>").css({height: ((sliderwidth) * str)});
-		
-		jQuery(".huge_it_slideshow_image_container_<?php echo $sliderID; ?>").css({width: (sliderwidth)});
-		jQuery(".huge_it_slideshow_image_container_<?php echo $sliderID; ?>").css({height: ((sliderwidth) * str)});
-			
-		if("<?php echo $slideshow_title_position[1]; ?>"=="middle"){var titlemargintopminus=jQuery(".huge_it_slideshow_title_text_<?php echo $sliderID; ?>").outerHeight()/2;}		
-		if("<?php echo $slideshow_title_position[0]; ?>"=="center"){var titlemarginleftminus=jQuery(".huge_it_slideshow_title_text_<?php echo $sliderID; ?>").outerWidth()/2;}		
-		jQuery(".huge_it_slideshow_title_text_<?php echo $sliderID; ?>").css({cssText: "margin-top:-" + titlemargintopminus + "px; margin-left:-"+titlemarginleftminus+"px;"});
-		
-		if("<?php echo $slideshow_description_position[1]; ?>"=="middle"){var descriptionmargintopminus=jQuery(".huge_it_slideshow_description_text_<?php echo $sliderID; ?>").outerHeight()/2;}	
-		if("<?php echo $slideshow_description_position[0]; ?>"=="center"){var descriptionmarginleftminus=jQuery(".huge_it_slideshow_description_text_<?php echo $sliderID; ?>").outerWidth()/2;}
-		jQuery(".huge_it_slideshow_description_text_<?php echo $sliderID; ?>").css({cssText: "margin-top:-" + descriptionmargintopminus + "px; margin-left:-"+descriptionmarginleftminus+"px;"});
-		        jQuery("#huge_it_loading_image_<?php echo $sliderID; ?>").css({display: "none"});
-                jQuery(".huge_it_slideshow_image_wrap1_<?php echo $sliderID; ?>").css({display: "block"});
+                jQuery("#huge_it_loading_image_<?php echo $sliderID; ?>").css({display: "none"});
+                jQuery(".huge_it_slideshow_image_wrap1_<?php echo $sliderID; ?>").css({opacity: 1});
 				jQuery(".huge_it_slideshow_image_wrap_<?php echo $sliderID; ?>").removeClass("nocolor");
 
 		
 		
-		if("<?php echo $paramssld['slider_crop_image']; ?>"=="resize"){
-			jQuery(".huge_it_slideshow_image_<?php echo $sliderID; ?>,  .huge_it_slideshow_image_container_<?php echo $sliderID; ?> img").css({
-				cssText: "width:" + sliderwidth + "px; height:" + ((sliderwidth) * str)	+"px;"
-			});
-		}else {
-			jQuery(".huge_it_slideshow_image_<?php echo $sliderID; ?>,.huge_it_slideshow_image_item2_<?php echo $sliderID; ?>").css({
-			cssText: "max-width: " + sliderwidth + "px !important; max-height: " + (sliderwidth * str) + "px !important;"
-		  });
+		if("<?php echo $paramssld['slider_crop_image']; ?>"=="crop"){
+                        jQuery(".huge_it_slider_ul li img").each(function(){
+                            if(jQuery(this).prop('naturalWidth')>jQuery(this).prop('naturalHeight'))
+                                jQuery(this).css({'width':'100%','height':'auto'/*,'top':'50%','left':'50%','transform':'translate( -50%, -50% )'*/});
+                            else{
+                                jQuery(this).css({'height':'100%','width':'auto'/*,'top':'50%','left':'50%','transform':'translate( -50%, -50% )'*/});
+                            }
+                        });
 		}
-		
-		jQuery('.huge_it_video_frame_<?php echo $sliderID; ?>').each(function (e) {
-          jQuery(this).width(sliderwidth);
-          jQuery(this).height(sliderwidth * str);
-        });
       }
       
       jQuery(window).load(function () {
@@ -951,12 +923,13 @@ $GLOBALS['changespeed']=$slider[0]->param;
 			jQuery("#huge_it_slideshow_right_<?php echo $sliderID; ?>").css({'display':'none'});
 			jQuery("#huge_it_slideshow_left_<?php echo $sliderID; ?>").css({'display':'none'});
 		});
-		var pausehover="<?php echo $sliderpauseonhover;?>";
 		if(pausehover=="on"){
 			jQuery("#huge_it_slideshow_image_container_<?php echo $sliderID; ?>, .huge_it_slideshow_image_container_<?php echo $sliderID; ?>").hover(function(){
 				window.clearInterval(huge_interval['huge_it_playInterval_'+<?php echo $sliderID; ?>]);
+                scrolling = false;
 			},function(){
 				window.clearInterval(huge_interval['huge_it_playInterval_'+<?php echo $sliderID; ?>]);
+                scrolling = true;                                   
 				play_<?php echo $sliderID; ?>();
 			});		
 		}	
@@ -967,11 +940,13 @@ $GLOBALS['changespeed']=$slider[0]->param;
       function play_<?php echo $sliderID; ?>(){	   
         /* Play.*/
 		//errorlogjQuery(".huge_it_slideshow_image_wrap_<?php echo $sliderID; ?>").after(" -- paly  ---- ");
+    if(scrolling){                                           
         huge_interval['huge_it_playInterval_'+<?php echo $sliderID; ?>] = setInterval(function () {
 			//errorlogjQuery(".huge_it_slideshow_image_wrap_<?php echo $sliderID; ?>").after(" -- time left ---- ");
           var iterator = 1;
           huge_it_change_image_<?php echo $sliderID; ?>(parseInt(jQuery('#huge_it_current_image_key_<?php echo $sliderID; ?>').val()), (parseInt(jQuery('#huge_it_current_image_key_<?php echo $sliderID; ?>').val()) + iterator) % data_<?php echo $sliderID; ?>.length, data_<?php echo $sliderID; ?>,false,false);
         }, '<?php echo $slidepausetime; ?>');
+     }                              
       }
 	  
       jQuery(window).focus(function() {
@@ -1367,7 +1342,7 @@ jQuery(document).ready(function($) {
 </script>
 
 	
-</div>
+
 <?php if($sliderthumbslider=='thumbnails'){?>
 <div class="huge_it_slideshow_thumbs_container_<?php echo $sliderID; ?>">
 			  <ul id="huge_it_thumb_slider" class="huge_it_slideshow_thumbs_<?php echo $sliderID; ?>">
@@ -1518,7 +1493,7 @@ jQuery(document).ready(function($) {
 
 	</div>	
 <?php } ?>
-
+</div>
 
 	  <?php 
 	return ob_get_clean();

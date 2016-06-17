@@ -23,6 +23,7 @@
 <body <?php body_class();  ?> >
 
 <!--<![endif]-->
+<div id="Home"></div>
 <header>
 <div class="header" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/img/mountain-white-space.png);background-size: cover; ">
 	<div class="logo-bar">
@@ -40,6 +41,7 @@
 	</div>
 </div>
 <div id="anchor"></div>
+<div id="About"></div>
 <!-- sticky navbar -->
 <div class="sticky">
 	<div class="navbar">
@@ -47,14 +49,20 @@
 			<div class="nav">
 		<!-- desktop menu -->	
  				<div class="nav-menu-desktop hidden-sm hidden-xs">
-					<?php
-						$defaults = array(
-							'theme_location' => 'main-nav',
-							'container' => false,
-							'depth' => 1
-						);
-						wp_nav_menu($defaults);
-					?>	
+					<ul>
+						<a href="#Home" class="smoothScroll">
+							<li>Home</li>
+						</a>
+						<a href="#About" class="smoothScroll">
+							<li>About</li>
+						</a>
+						<a href="#Work" class="smoothScroll">
+							<li>My Work</li>
+						</a>
+						<a href="#Contact" class="smoothScroll">
+							<li>Contact Me</li>
+						</a>
+					</ul>	
 				</div>
 		<!-- end desktop nav -->
 		<!-- mobile menu -->
@@ -63,14 +71,20 @@
 						<span class="glyphicon glyphicon-align-justify"></span> Menu
 					</button>
 					<div class="dropdown">
-						<?php
-						$defaults = array(
-							'theme_location' => 'main-nav',
-							'container' => false,
-							'depth' => 1
-						);
-						wp_nav_menu($defaults);
-					?>	
+						<ul>
+						<a href="#Home" class="smoothScroll">
+							<li class="menu-item">Home</li>
+						</a>
+						<a href="#About" class="smoothScroll">
+							<li class="menu-item">About</li>
+						</a>
+						<a href="#Work" class="smoothScroll">
+							<li class="menu-item">My Work</li>
+						</a>
+						<a href="#Contact" class="smoothScroll">
+							<li class="menu-item">Contact Me</li>
+						</a>
+					</ul>
 					</div>
 				</div>
 		<!-- end mobile nav -->

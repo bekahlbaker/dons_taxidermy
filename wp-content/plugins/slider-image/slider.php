@@ -4,7 +4,7 @@
 Plugin Name: Huge IT Slider
 Plugin URI: http://huge-it.com/slider
 Description: Huge IT slider is a convenient tool for organizing the images represented on your website into sliders. Each product on the slider is assigned with a relevant slider, which makes it easier for the customers to search and identify the needed images within the slider.
-Version: 3.1.83
+Version: 3.1.86
 Author: Huge-IT
 Author URI: http://huge-it.com/
 License: GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
@@ -57,6 +57,15 @@ function huge_it_slider_images_list_shotrcode($atts)
     ), $atts));
 	add_style_to_header($atts['id']);
 	add_action('wp_footer', 'add_style_to_header');
+        
+        wp_register_script( 'bxSlider',plugins_url("js/jquery.bxslider.js", __FILE__) ,array ('jquery'), '1.0.0', true);
+	wp_enqueue_script('bxSlider');
+	wp_register_script( 'bxSliderSetup',plugins_url("js/bxslider.setup.js", __FILE__) ,array ('jquery'), '1.0.0', true);
+	wp_enqueue_script('bxSliderSetup');
+
+	wp_register_style( 'bxSlidercss',plugins_url("style/jquery.bxslider.css", __FILE__));
+	wp_enqueue_style('bxSlidercss');
+        
     return huge_it_cat_images_list($atts['id']);
 }
 
@@ -481,7 +490,7 @@ function huge_it_slider_admin_script()
 		
 
 }
-function huge_it_enque_bx_slider (){
+/*function huge_it_enque_bx_slider (){
 	wp_register_script( 'bxSlider',plugins_url("js/jquery.bxslider.js", __FILE__) ,array ('jquery'), '1.0.0', true);
 	wp_enqueue_script('bxSlider');
 	wp_register_script( 'bxSliderSetup',plugins_url("js/bxslider.setup.js", __FILE__) ,array ('jquery'), '1.0.0', true);
@@ -490,7 +499,7 @@ function huge_it_enque_bx_slider (){
 	wp_register_style( 'bxSlidercss',plugins_url("style/jquery.bxslider.css", __FILE__));
 	wp_enqueue_style('bxSlidercss');
 }
-add_action('wp_footer','huge_it_enque_bx_slider' );
+add_action('wp_footer','huge_it_enque_bx_slider' );*/
 function huge_it_slider_option_admin_script()
 {
 		wp_enqueue_script("jquery_old", "http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js", FALSE);
@@ -926,9 +935,17 @@ function add_style_to_header($id) {
     	$sliderloadingicon='';
     }
      if(isset($slider[0]->show_thumb)){
-    	$sliderthumbslider=$slider[0]->show_thumb;
+    	$sliderthumbslider = $slider[0]->show_thumb;
     }else{
     	$sliderthumbslider='';
+    }
+    $sliderBorderWidth = $paramssld['slider_slideshow_border_size'];
+    
+    if($sliderthumbslider =='thumbnails'){
+        $thumbHeight = $paramssld['slider_thumb_height']+$sliderBorderWidth;
+    }
+    else{
+        $thumbHeight = 0;
     }
 	
 		
@@ -964,9 +981,9 @@ function add_style_to_header($id) {
 	 }
 	 
 	 .huge_it_slideshow_image_wrap_<?php echo $sliderID; ?> {
-		height:<?php echo $sliderheight ; ?>px;
-		width:<?php  echo $sliderwidth ; ?>px;
-
+		height:<?php echo $sliderheight - 2*$sliderBorderWidth+$thumbHeight; ?>px;
+		width:<?php  echo $sliderwidth - 2*$sliderBorderWidth; ?>px;
+                max-width: 100%;
 		position:relative;
 		display: block;
 		text-align: center;
@@ -988,7 +1005,7 @@ function add_style_to_header($id) {
 		 display:block;
 	 }
 	 .huge_it_slideshow_image_wrap1_<?php echo $sliderID; ?>.nodisplay {
-		 display:none;
+		 opacity:0;
 	 }
 	.huge_it_slideshow_image_wrap_<?php echo $sliderID; ?> * {
 		box-sizing: border-box;
@@ -998,9 +1015,24 @@ function add_style_to_header($id) {
 		 
 
 	  .huge_it_slideshow_image_<?php echo $sliderID; ?> {
-			/*width:100%;*/
+               <?php if($paramssld['slider_crop_image'] =="resize"){?>
+                    width: 100%;
+                    height: 100%;
+                <?php } else{?>
+                    height: auto;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate( -50%, -50% );
+                <?php }?>
+                max-width: 100%;
+                max-height: 100%;
+                
 	  }
-
+          .huge_it_slideshow_image_wrap1_<?php echo $sliderID; ?>{
+              height:<?php echo $sliderheight  - 2*$sliderBorderWidth; ?>px;
+              width:<?php  echo $sliderwidth - 2*$sliderBorderWidth; ?>px;
+              max-width: 100%;
+          }
 	  #huge_it_slideshow_left_<?php echo $sliderID; ?>,
 	  #huge_it_slideshow_right_<?php echo $sliderID; ?> {
 		cursor: pointer;
@@ -1013,8 +1045,13 @@ function add_style_to_header($id) {
 
 		/*z-index: 10130;*/
 		z-index: 13;
-		bottom:25px;
-		top:50%;		
+        <?php if($sliderthumbslider == 'thumbnails'){?>
+		    top:calc(50% - <?php echo $paramssld['slider_thumb_height']/2+$paramssld['slider_slideshow_border_size']; ?>px);	
+        <?php }else{?>
+            margin-top: 0px !important;
+            top: 50%;
+            transform: translateY(-50%);
+        <?php }?>
 	  }
 	 
 
@@ -1045,6 +1082,8 @@ function add_style_to_header($id) {
 		text-align: center;
 		vertical-align: middle;
 		width:100%;
+                overflow:hidden;
+                height: 100%;
 	  }	  
 		
 	  .huge_it_slideshow_title_text_<?php echo $sliderID; ?> {
@@ -1167,6 +1206,19 @@ function add_style_to_header($id) {
 		_width: inherit;
 		_height: inherit;
 	  }
+          .huge_it_slide_bg_<?php echo $sliderID; ?> li img{
+                position: absolute;
+                <?php if($paramssld['slider_crop_image'] != 'crop') { ?>
+                    /*top: -<?php echo $paramssld['slider_slideshow_border_size']; ?>px !important;
+                    left: -<?php echo $paramssld['slider_slideshow_border_size']; ?>px !important;*/
+                    left:0;
+                <?php }?>
+                height: 100%;
+          }
+          .huge_it_slide_bg_<?php echo $sliderID; ?> li iframe{
+                width: 100%;
+                height: 100%;
+          }
 	  .huge_it_slider_<?php echo $sliderID; ?> {
 		width:100%;
 		height:100%;
@@ -1183,7 +1235,7 @@ function add_style_to_header($id) {
 		display: table-cell;
 		filter: Alpha(opacity=100);
 		opacity: 1;
-		position: absolute;
+		position: absolute !important;
 		top:0px !important;
 		left:0px !important;
 		vertical-align: middle;
@@ -1201,7 +1253,7 @@ function add_style_to_header($id) {
 		display: table-cell;
 		filter: Alpha(opacity=0);
 		opacity: 0;
-		position: absolute;
+		position: absolute !important;
 		top:0px !important;
 		left:0px !important;
 		vertical-align: middle;
@@ -1334,7 +1386,7 @@ if(isset($GLOBALS['thumbnail_width'])){
 		}
 		.huge_it_slideshow_thumbs_<?php echo $sliderID; ?>{
 
-			
+			margin: 0;
 		}
 		.huge_it_slideshow_thumbs_<?php echo $sliderID; ?> li{
 			display: inline-block;
@@ -1348,6 +1400,7 @@ if(isset($GLOBALS['thumbnail_width'])){
 		    cursor: pointer;
 		    background: #<?php echo $paramssld['slider_thumb_back_color']; ?>;
 		    z-index: 17;
+                    height: <?php echo $paramssld['slider_thumb_height']; ?>px;
 		}
 		.sl_thumb_img{
 		    width: 100% !important;
