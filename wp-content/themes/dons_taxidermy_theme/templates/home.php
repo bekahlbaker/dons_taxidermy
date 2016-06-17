@@ -51,7 +51,10 @@ Template Name: Home Template
 					<?php the_field('my_work_short_message') ?>
 				</div>
 				<div class="navigation">
-					<button id="gallery" class="ghost">see my work</button>
+					<button id="gallery" class="ghost">see my work</button> 
+				</div>
+				<div class="navigation">
+					<a href="#Contact" class="smoothScroll"><button class="ghost">contact me</button></a>
 				</div>
 				<div class="gallery">
 					<div class="modal" id="galleryModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
