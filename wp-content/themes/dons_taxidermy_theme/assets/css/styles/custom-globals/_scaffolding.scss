@@ -7,8 +7,8 @@
 
 .container{
 	padding: 30px;
-	padding-left: 40px;
-	padding-right: 40px;
+	// padding-left: 40px;
+	// padding-right: 40px;
 }
 
 .container-fluid{
@@ -21,10 +21,10 @@
     top:0; left:0;
     width: 100%; }
 
-.title_image img{
-	max-height: 300px;
-	max-width: 300px;
-}
+// .title_image img{
+// 	max-height: 300px;
+// 	max-width: 300px;
+// }
 
 button.ghost{
 	background: $orange;
@@ -32,7 +32,7 @@ button.ghost{
 	color: $black!important;
 	font-family: $body-font;
 	font-size: 1.25em!important;
-	font-weight: 300!important;
+	font-weight: 400!important;
 	letter-spacing: 2px!important;
 	padding: 10px 50px!important;
 	text-transform: uppercase;
@@ -45,18 +45,20 @@ button.ghost{
 			border: 1px solid $black;
 		}		
 }
-.header{
-	padding: 20px 0;
-}
+// .header{
+// 	padding: 20px 0;
+// }
 
 hr{
-	border-top: 1px solid $orange;
-	padding: 10px;
-	width: 75vw;
+	border-top: 3px solid $orange;
+	margin-left: 0;
+	margin-right: 0;
+	// padding: 10px;
+	width: 100%;
 }
 
-.message{
-	padding: 20px;
-}
+// .message{
+// 	padding: 20px;
+// }
 
 

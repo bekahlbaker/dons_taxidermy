@@ -11,3 +11,4 @@ wp-config.php
 *Thumbs.db
 *.sass-cache*
 *~imageoptim*
+*.wpress

@@ -28,7 +28,9 @@
 <div class="header" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/img/mountain-white-space.png);background-size: cover; ">
 	<div class="logo-bar">
 		<div class="container">
-			<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_directory'); ?>/assets/img/logo.png"></a>
+			<div class="pull-left">
+				<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_directory'); ?>/assets/img/logo.png"></a>
+			</div>
 		</div>
 	</div>
 	<div id="hiding-header">
@@ -37,9 +39,8 @@
 		</div>
  		<div class="button">
 			<a href="#anchor" class="smoothScroll"><button><span class="glyphicon glyphicon-chevron-down"></span></button></a>
-		</div> 
 	</div>
-</div>
+</div> <!-- end .header -->
 <div id="anchor"></div>
 <div id="About"></div>
 <!-- sticky navbar -->
