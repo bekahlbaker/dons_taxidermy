@@ -7,11 +7,5 @@ $(function() {
 		});		
 });  
 
-$(function() {
-		$('#gallery').on('click', function() {
-			$('#galleryModal').modal('show');   
-		});		
-}); 
-
 
 }(jQuery);

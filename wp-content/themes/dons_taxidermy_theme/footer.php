@@ -17,7 +17,7 @@
 					</a>
 				</div>
 				<div class="col-xs-2 call">
-					<a href="tel:+1-903-714-3504" class="hidden-md hidden-lg" data-toggle="tooltip"  data-placement="bottom" title="Call">
+					<a href="tel:+1-903-714-6862" class="hidden-md hidden-lg" data-toggle="tooltip"  data-placement="bottom" title="Call">
 						<span class="glyphicon glyphicon-phone-alt"></span>
 					</a>
 					<a href="<?php bloginfo('url'); ?>/contact" class="hidden-sm hidden-xs" data-toggle="tooltip"  data-placement="bottom" title="Call">

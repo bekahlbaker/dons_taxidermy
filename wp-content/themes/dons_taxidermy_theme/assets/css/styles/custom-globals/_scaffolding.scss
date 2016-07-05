@@ -7,8 +7,6 @@
 
 .container{
 	padding: 30px;
-	// padding-left: 40px;
-	// padding-right: 40px;
 }
 
 .container-fluid{
@@ -20,11 +18,6 @@
     position: fixed;
     top:0; left:0;
     width: 100%; }
-
-// .title_image img{
-// 	max-height: 300px;
-// 	max-width: 300px;
-// }
 
 button.ghost{
 	background: $orange;
@@ -45,20 +38,16 @@ button.ghost{
 			border: 1px solid $black;
 		}		
 }
-// .header{
-// 	padding: 20px 0;
-// }
+.header{
+	padding: 10px 0;
+}
 
 hr{
 	border-top: 3px solid $orange;
 	margin-left: 0;
 	margin-right: 0;
-	// padding: 10px;
 	width: 100%;
 }
 
-// .message{
-// 	padding: 20px;
-// }
 
 

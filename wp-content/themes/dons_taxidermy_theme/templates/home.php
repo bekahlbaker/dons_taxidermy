@@ -9,32 +9,29 @@ Template Name: Home Template
 	<div class="container">
 		<div class="row">
 			<div class="col-md-5">
-				<h2 class="header"><?php the_field('welcome') ?></h2>
-				<img src="<?php bloginfo('template_directory'); ?>/assets/img/hunter.png" alt="" style="max-width: 200px;">	
+ 				<h2 class="header"><?php the_field('welcome') ?></h2>
+				<img src="<?php bloginfo('template_directory'); ?>/assets/img/profile.png" alt="" style="max-width: 200px; border-radius: 50px;">	
 			</div>
 			<div class="col-md-7">
 				<div class="message">
 					<?php the_field('welcome_short_message') ?>
+					<div id="Work"></div>
 				</div>	
 			</div>
 		</div>
 	</div>
 </section>
 
-<div class="gallery" id="Work">
+<div class="gallery">
 <?php echo do_shortcode("[FinalTilesGallery id='3']"); ?>
+<div id="Contact"></div>
 </div>
 
-<section class="forms" id="Contact">
-	<!-- <div class="container">
-		<div class="title">
-			<h2 class="header" style="text-align:left;"><?php the_field('contact_me_click') ?></h2>
-		</div>
-		<hr>
-	  	<div class="message">
-			<p><?php the_field('contact_me_short_message') ?></p>
-		</div>
-	</div> -->
+<section class="testimonials container">
+	<?php if( function_exists( "get_testimonial_slider_recent" ) ){ get_testimonial_slider_recent( $set="1") ;}?>
+</section>
+
+<section class="forms">
 		<div class="container">
 			<div class="row contact-me">
 				<div class="col-md-6 contact-col">
