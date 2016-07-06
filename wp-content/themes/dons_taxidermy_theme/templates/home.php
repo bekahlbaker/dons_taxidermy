@@ -10,7 +10,8 @@ Template Name: Home Template
 		<div class="row">
 			<div class="col-md-5">
  				<h2 class="header"><?php the_field('welcome') ?></h2>
-				<img src="<?php bloginfo('template_directory'); ?>/assets/img/profile.png" alt="" style="max-width: 200px; border-radius: 50px;">	
+ 				<p>Donald Baker, Owner</p>
+				<img src="<?php bloginfo('template_directory'); ?>/assets/img/profile.png" alt="" style="max-width: 200px; border-radius: 50px;">
 			</div>
 			<div class="col-md-7">
 				<div class="message">
