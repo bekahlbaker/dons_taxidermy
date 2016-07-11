@@ -3,21 +3,21 @@
 	background: $brown;
 }
 
-.testimonials{
-	text-align: center;
+// .testimonials{
+// 	text-align: center;
 
-	.testimonial_by{
-		line-height: 150px!important;
-		text-align: center!important;
-	}
-	.testimonial_quote{
-		line-height: 2!important;
-		padding-top: 25px!important;
-	}
-	.testimonial_slideri{
-		overflow: scroll!important;
-	}
-}
+// 	.testimonial_by{
+// 		line-height: 150px!important;
+// 		text-align: center!important;
+// 	}
+// 	.testimonial_quote{
+// 		line-height: 2!important;
+// 		padding-top: 25px!important;
+// 	}
+// 	.testimonial_slideri{
+// 		overflow: scroll!important;
+// 	}
+// }
 
 .col-md-5{
 	text-align: center;
@@ -80,8 +80,11 @@ section {
 }
 
 .price-list{
-	background: $brown;
-	text-align: center;
+
+	.price-message{
+		text-align: center;
+		padding: 10vw;
+	}
 
 	.button{
 

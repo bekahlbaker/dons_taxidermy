@@ -36,6 +36,7 @@
 	<div id="hiding-header">
 		<div class="h1">
 			<h1><?php the_field('h1') ?></h1>
+			<h1 style="display: none;">Dons Taxidermy Canton TX</h1>
 		</div>
  		<div class="button">
 			<a href="#anchor" class="smoothScroll"><button><span class="glyphicon glyphicon-chevron-down"></span></button></a>

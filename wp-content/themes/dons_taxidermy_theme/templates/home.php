@@ -9,7 +9,7 @@ Template Name: Home Template
 	<div class="container">
 		<div class="row">
 			<div class="col-md-5">
- 				<h2 class="header"><?php the_field('welcome') ?></h2>
+ 				<h2 class="header">Don's Taxidermy</h2>
  				<p>Donald Baker, Owner</p>
 				<img src="<?php bloginfo('template_directory'); ?>/assets/img/profile.png" alt="" style="max-width: 200px; border-radius: 50px;">
 			</div>
@@ -28,10 +28,6 @@ Template Name: Home Template
 <div id="Contact"></div>
 </div>
 
-<section class="testimonials container">
-	<?php if( function_exists( "get_testimonial_slider_recent" ) ){ get_testimonial_slider_recent( $set="1") ;}?>
-</section>
-
 <section class="forms">
 		<div class="container">
 			<div class="row contact-me">
@@ -45,7 +41,7 @@ Template Name: Home Template
 					<div class="second">
 						<div class="call">
 							<h3>Call</h3>
-							<p class="number"><?php the_field('call') ?></p>
+							<p class="number">903-714-6862</p>
 						</div>
 						<div class="directions">
 							<h3>Stop by</h3>
@@ -58,24 +54,36 @@ Template Name: Home Template
 			</div>
 		</div>
 
-<div class="price-list">
-	<div class="container">
-			<div class="price-message">
-				<p>Budgets and dream-mounts are different for everyone, so the best thing to do is give me a call; however, I've included a price list of the basics... so you have a rough idea of what you're looking at.</p>
-				<button class="ghost" id="price">See Prices</button>
+	<div class="contianer-fluid" style="background: #7e7d7b;">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="price-list">
+					
+						<div class="price-message">
+							<p>Budgets and dream-mounts are different for everyone, so the best thing to do is give me a call; however, I've included a price list of the basics... so you have a rough idea of what you're looking at.</p>
+							<button class="ghost" id="price">See Prices</button>
+						</div>
+						<div class="modal fade" id="priceModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						  <div class="modal-dialog">
+						    <div class="modal-content">              
+						      <div class="modal-body">
+						      	<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+						        <p> <?php the_field('price_list') ?> </p>
+						      </div>
+						    </div>
+						  </div>
+						</div>
+
+				</div>
 			</div>
-			<div class="modal fade" id="priceModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			  <div class="modal-dialog">
-			    <div class="modal-content">              
-			      <div class="modal-body">
-			      	<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-			        <p> <?php the_field('price_list') ?> </p>
-			      </div>
-			    </div>
-			  </div>
+			<div class="col-md-6">
+					<div class="testimonials container">
+						<?php if( function_exists( "get_testimonial_slider_recent" ) ){ get_testimonial_slider_recent( $set="1") ;}?>
+					</div>
 			</div>
 		</div>
 	</div>
+
 </section>
 
 <?php get_footer(); ?> 
