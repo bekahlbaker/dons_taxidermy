@@ -11,7 +11,7 @@ Template Name: Home Template
 			<div class="col-md-5">
  				<h2 class="header">Don's Taxidermy</h2>
  				<p>Donald Baker, Owner</p>
-				<img src="<?php bloginfo('template_directory'); ?>/assets/img/profile.png" alt="" style="max-width: 200px; border-radius: 50px;">
+				<img src="<?php bloginfo('template_directory'); ?>/assets/img/profile.png" alt="" style="max-width: 200px;">
 			</div>
 			<div class="col-md-7">
 				<div class="message">
@@ -23,8 +23,20 @@ Template Name: Home Template
 	</div>
 </section>
 
-<div class="gallery">
-<?php echo do_shortcode("[FinalTilesGallery id='3']"); ?>
+<div id="gallery" class="container-fluid">
+<?php if(have_rows('gallery')) : ?>
+	<ul class="gallery row">
+		<?php while(have_rows('gallery')) : the_row(); ?>
+			<li class="col-xs-4 col-sm-2">
+				<img src="<?php the_sub_field('image'); ?>">
+				<div class="gallery-item-info">
+					<h2><?php the_sub_field('title'); ?></h2>
+					<p><?php the_sub_field('description'); ?></p>
+				</div>
+			</li>	
+		<?php endwhile; ?>
+	</ul>
+<?php endif; ?>
 <div id="Contact"></div>
 </div>
 
