@@ -7,5 +7,12 @@ $(function() {
 		});		
 });  
 
+$('.title').hide();
+
+$('.one').hover(function() {
+	$(this).children('.title').slideDown();
+}, function() {
+	$(this).children('.title').slideUp();
+});
 
 }(jQuery);

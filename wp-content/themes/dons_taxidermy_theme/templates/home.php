@@ -27,19 +27,19 @@ Template Name: Home Template
 <?php if(have_rows('gallery')) : ?>
 	<ul class="gallery row">
 		<?php while(have_rows('gallery')) : the_row(); ?>
-			<li class="col-xs-4 col-sm-2">
-				<img src="<?php the_sub_field('image'); ?>">
-				<div class="gallery-item-info">
-					<h2><?php the_sub_field('title'); ?></h2>
-					<p><?php the_sub_field('description'); ?></p>
+			<li class="col-xs-4 col-sm-4 col-md-2 img">
+			<div class="one">
+				<a href="" data-featherlight="<?php the_sub_field('image'); ?>"><img src="<?php the_sub_field('image'); ?>"></a>
+				<div class="title">
+					<h4><?php the_sub_field('title'); ?></h4>
 				</div>
+			</div>
 			</li>	
 		<?php endwhile; ?>
 	</ul>
 <?php endif; ?>
 <div id="Contact"></div>
 </div>
-
 <section class="forms">
 		<div class="container">
 			<div class="row contact-me">
