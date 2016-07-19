@@ -30,9 +30,9 @@ Template Name: Home Template
 			<li class="col-xs-4 col-sm-4 col-md-2 img">
 			<div class="one">
 				<a href="" data-featherlight="<?php the_sub_field('image'); ?>"><img src="<?php the_sub_field('image'); ?>"></a>
-				<div class="title">
+<!-- 				<div class="title">
 					<a href="" data-featherlight="<?php the_sub_field('image'); ?>"><h4><?php the_sub_field('title'); ?> <i class="fa fa-search-plus" aria-hidden="true"></i></h4></a>
-				</div>
+				</div> -->
 			</div>
 			</li>	
 		<?php endwhile; ?>
