@@ -1,0 +1,718 @@
+@charset "UTF-8";
+/**
+ * Import your Admin SCSS files. These are styles for the dashboard/admin section of wordpress.
+ * ============================================================================================
+ */
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700);
+@import url(https://fonts.googleapis.com/css?family=Francois+One);
+.placeholder {
+  content: 'Placehodler for Grunt to compile';
+}
+
+html {
+  font-size: 14px;
+  transition: all .33s ease-in-out;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1200px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+p {
+  color: #000000;
+  font-family: "Lato", sans-serif;
+  font-size: 1em;
+  font-weight: normal;
+  letter-spacing: 1px;
+  line-height: 24px;
+}
+
+h1 {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  h1 {
+    font-size: 1.15em;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  h1 {
+    font-size: 1.25em;
+  }
+}
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 1.50em;
+  }
+}
+
+h2 {
+  color: #000000;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.5em;
+  text-shadow: 1px 2px 3px #2E3032 !important;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+h3 {
+  color: #000000;
+  font-family: "Lato", sans-serif;
+  text-shadow: 1px 2px 3px #2E3032;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+h4 {
+  color: #ffffff;
+  font-family: "Lato", sans-serif;
+  font-size: 1.25em;
+  text-transform: uppercase;
+}
+
+h5 {
+  font-family: "Lato", sans-serif;
+  font-size: 1.50em;
+  margin: 30px auto;
+  text-transform: uppercase;
+}
+
+h6 {
+  font-family: "Lato", sans-serif;
+  font-size: 1.25em;
+  text-transform: uppercase;
+}
+
+a:hover, a:active, a:focus, a:visited {
+  color: #ffffff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.content-block {
+  padding: 50px 0;
+}
+
+.container {
+  padding: 30px;
+}
+
+.container-fluid {
+  margin: 0;
+  padding: 0;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+button.ghost {
+  background: #FF6600;
+  border: 1px solid #FF6600;
+  color: #000000 !important;
+  font-family: "Lato", sans-serif;
+  font-size: 1.25em !important;
+  font-weight: 400 !important;
+  letter-spacing: 2px !important;
+  padding: 10px 50px !important;
+  text-transform: uppercase;
+  text-align: center;
+}
+@media (max-width: 1199px) {
+  button.ghost {
+    padding: 5px 25px !important;
+  }
+}
+button.ghost:hover {
+  background: transparent;
+  border: 1px solid #000000;
+}
+
+.modal-content {
+  background: transparent;
+  margin-top: 150px !important;
+}
+.modal-content iframe {
+  width: 100%;
+}
+
+blockquote {
+  background: transparent;
+  border-left: 10px solid #999;
+  padding: 0.5em 10px;
+  margin-top: 45px;
+  quotes: "“" "”" "‘" "’";
+  font-size: 1rem;
+}
+
+blockquote:before {
+  color: #333;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+blockquote:after {
+  color: #333;
+  content: close-quote;
+  font-size: 2em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+blockquote p {
+  display: inline;
+}
+
+.modal-content {
+  background: transparent;
+  margin-top: 150px !important;
+}
+.modal-content iframe {
+  width: 100%;
+}
+
+blockquote {
+  background: transparent;
+  border-left: 10px solid #999;
+  padding: 0.5em 10px;
+  margin-top: 45px;
+  quotes: "“" "”" "‘" "’";
+  font-size: 1rem;
+}
+
+blockquote:before {
+  color: #333;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+blockquote:after {
+  color: #333;
+  content: close-quote;
+  font-size: 2em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+blockquote p {
+  display: inline;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+header .header {
+  padding: 0;
+}
+header .logo-bar {
+  padding-bottom: 10px;
+}
+header .logo-bar img {
+  height: 65px;
+}
+header #hiding-header {
+  height: 66.8vh;
+}
+header #hiding-header .h1 {
+  margin: 0px;
+}
+header #hiding-header .h1 h1 {
+  color: black;
+  margin: 0px;
+  text-align: center;
+  padding: 50px 0px;
+  text-shadow: 1px 2px 4px #2E3032;
+}
+@media (max-width: 991px) {
+  header #hiding-header .h1 h1 {
+    padding: 50px 0 25px 0;
+  }
+}
+header #hiding-header .button {
+  text-align: center;
+}
+header #hiding-header .button button {
+  background: none;
+  border: none;
+}
+header #hiding-header .button span {
+  color: black;
+  font-size: 4em;
+  text-shadow: 1px 2px 10px #2E3032;
+}
+header #hiding-header .button span:hover {
+  text-shadow: 0 15px 10px #2E3032;
+}
+header .sticky {
+  z-index: 999;
+}
+header .sticky .navbar {
+  background-color: #2E3032;
+  border-radius: 0;
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+header .sticky .navbar .nav {
+  padding: 22px 0px;
+}
+header .sticky .navbar .nav .nav-menu-desktop li {
+  display: inline;
+  font-family: "Lato", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  list-style: none;
+  letter-spacing: 3px;
+  padding: 0px 50px 28px 50px;
+  text-transform: uppercase;
+}
+header .sticky .navbar .nav .nav-menu-desktop li:hover {
+  border-bottom: 7px solid #FF6600;
+  cursor: pointer;
+}
+header .sticky .navbar .nav .nav-menu-desktop li a {
+  color: #ffffff;
+}
+header .sticky .navbar .nav .nav-menu-mobile {
+  text-align: center;
+}
+header .sticky .navbar .nav .nav-menu-mobile #mobile {
+  border: none;
+  color: #000000;
+  font-family: "Lato", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  background: #FF6600;
+  cursor: pointer;
+  padding: 10px 0px;
+  text-align: left;
+  text-transform: uppercase;
+  width: 90vw;
+}
+header .sticky .navbar .nav .nav-menu-mobile #mobile span {
+  color: #000000;
+  font-size: 1em;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+header .sticky .navbar .nav .nav-menu-mobile .dropdown ul {
+  padding-top: 30px;
+  padding-left: 0px;
+}
+header .sticky .navbar .nav .nav-menu-mobile .dropdown li {
+  font-family: "Lato", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  list-style: none;
+  padding: 20px 0px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+header .sticky .navbar .nav .nav-menu-mobile .dropdown li a {
+  color: #ffffff;
+}
+header .sticky .navbar .nav .nav-menu-mobile .dropdown li a:hover {
+  color: #FF6600;
+}
+
+footer {
+  bottom: 0;
+  left: 0;
+  background-color: #2E3032;
+  height: 22vh;
+}
+footer .contact {
+  text-align: center;
+}
+footer .contact .row {
+  padding-top: 20px;
+}
+footer .contact .row span {
+  font-size: 2.5em;
+  color: #ffffff;
+}
+footer .contact .row span:hover {
+  color: #FF6600;
+}
+footer .contact .row i {
+  font-size: 3em;
+  color: #ffffff;
+}
+footer .contact .row i:hover {
+  color: #FF6600;
+}
+footer .contact .row title {
+  font-family: "Lato", sans-serif;
+  color: #000000;
+  background: #ffffff;
+  border: none;
+}
+footer .copyright {
+  padding: 25px 0px 15px 0px;
+  text-align: center;
+}
+footer .copyright p {
+  color: #ffffff;
+  font-family: "Lato", sans-serif;
+  font-weight: 400px;
+  font-size: .75em;
+  opacity: .5;
+}
+
+.gallery {
+  display: block;
+  padding: 3px 0;
+  margin: 0 auto;
+}
+.gallery li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+.gallery img {
+  height: 16.5vw;
+  width: 16.5vw;
+}
+@media (max-width: 991px) {
+  .gallery img {
+    height: 32vw;
+    width: 32vw;
+  }
+}
+.gallery .one {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid white;
+}
+.gallery .title {
+  margin: 0 auto;
+  bottom: 0px;
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 40px;
+  width: 16.5vw;
+  overflow: hidden;
+  position: absolute;
+}
+@media (max-width: 991px) {
+  .gallery .title {
+    width: 32vw;
+  }
+}
+.gallery .title h4 {
+  line-height: 1;
+}
+.gallery p {
+  display: none;
+}
+
+.imgModal .button {
+  background-color: #FF6600;
+  border: 2px solid transparent;
+  color: #ffffff;
+  font-family: "Lato", sans-serif;
+  font-size: 1em;
+  font-weight: 400 !important;
+  letter-spacing: 1px;
+  padding: 10px 100px;
+  text-transform: uppercase;
+}
+@media (max-width: 1199px) {
+  .imgModal .button {
+    padding: 10px 50px;
+  }
+}
+.imgModal .button:hover {
+  background-color: transparent;
+  border: 2px solid #000000;
+  color: #000000;
+}
+.imgModal .modal-body {
+  background: #ffffff;
+}
+.imgModal .modal-body .close {
+  opacity: 1 !important;
+}
+.imgModal .modal-body .close:hover {
+  opacity: 1 !important;
+}
+.imgModal .modal-body span {
+  color: #FF6600;
+  font-size: 2em;
+  opacity: 1 !important;
+  text-shadow: 1px 2px 0 #2E3032;
+}
+.imgModal .modal-body span:hover {
+  opacity: 1 !important;
+  text-shadow: 1px 5px 0 #2E3032;
+}
+
+.about {
+  background: #7e7d7b;
+}
+
+.col-md-5 {
+  text-align: center;
+}
+
+.message {
+  margin: 25px;
+}
+
+section {
+  position: relative;
+  z-index: 1;
+}
+
+.forms {
+  background: #D1D1D1;
+}
+
+.contact-me .contact-col .contact-form {
+  margin-right: 15px;
+}
+.contact-me .contact-col .contact-form .ninja-forms-all-fields-wrap {
+  font-family: "Lato", sans-serif !important;
+  font-weight: 500;
+}
+.contact-me .contact-col .contact-form #ninja_forms_field_4 {
+  background: #FF6600;
+  border: 1px solid #FF6600;
+  color: #000000 !important;
+  font-family: "Lato", sans-serif;
+  font-size: 1.25em !important;
+  font-weight: 400 !important;
+  letter-spacing: 2px !important;
+  padding: 10px 50px !important;
+  text-transform: uppercase;
+}
+@media (max-width: 1199px) {
+  .contact-me .contact-col .contact-form #ninja_forms_field_4 {
+    padding: 10px 50px;
+  }
+}
+@media (max-width: 1199px) {
+  .contact-me .contact-col .contact-form #ninja_forms_field_4 {
+    padding: 5px 25px !important;
+  }
+}
+.contact-me .contact-col .contact-form #ninja_forms_field_4:hover {
+  background: transparent;
+  border: 1px solid #000000;
+}
+.contact-me .contact-col .second {
+  margin-left: 15px;
+}
+.contact-me .contact-col .second .number {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.price-list .price-message {
+  text-align: center;
+  padding: 10vw;
+}
+.price-list .button {
+  background-color: #FF6600;
+  border: 2px solid transparent;
+  color: #ffffff;
+  font-family: "Lato", sans-serif;
+  font-size: 1em;
+  font-weight: 400 !important;
+  letter-spacing: 1px;
+  padding: 10px 100px;
+  text-transform: uppercase;
+}
+@media (max-width: 1199px) {
+  .price-list .button {
+    padding: 10px 50px;
+  }
+}
+.price-list .button:hover {
+  background-color: transparent;
+  border: 2px solid #000000;
+  color: #000000;
+}
+.price-list .modal-body {
+  background: #ffffff;
+}
+.price-list .modal-body .close {
+  opacity: 1 !important;
+}
+.price-list .modal-body .close:hover {
+  opacity: 1 !important;
+}
+.price-list .modal-body span {
+  color: #FF6600;
+  font-size: 2em;
+  opacity: 1 !important;
+  text-shadow: 1px 2px 0 #2E3032;
+}
+.price-list .modal-body span:hover {
+  opacity: 1 !important;
+  text-shadow: 1px 5px 0 #2E3032;
+}
+
+.modal-backdrop {
+  position: absolute;
+}
+
+/**
+ * Featherlight – ultra slim jQuery lightbox
+ * Version 1.5.0 - http://noelboss.github.io/featherlight/
+ *
+ * Copyright 2016, Noël Raoul Bossart (http://www.noelboss.com)
+ * MIT Licensed.
+**/
+@media all {
+  .featherlight {
+    display: none;
+    /* dimensions: spanning the background from edge to edge */
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2147483647;
+    /* z-index needs to be >= elements on the site. */
+    /* position: centering content */
+    text-align: center;
+    /* insures that the ::before pseudo element doesn't force wrap with fixed width content; */
+    white-space: nowrap;
+    /* styling */
+    cursor: pointer;
+    background: #333;
+    /* IE8 "hack" for nested featherlights */
+    background: transparent;
+  }
+
+  /* support for nested featherlights. Does not work in IE8 (use JS to fix) */
+  .featherlight:last-of-type {
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  .featherlight:before {
+    /* position: trick to center content vertically */
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+  }
+
+  .featherlight .featherlight-content {
+    /* make content container for positioned elements (close button) */
+    position: relative;
+    /* position: centering vertical and horizontal */
+    text-align: left;
+    vertical-align: middle;
+    display: inline-block;
+    /* dimensions: cut off images */
+    overflow: auto;
+    padding: 25px 25px 0;
+    border-bottom: 25px solid transparent;
+    /* dimensions: handling large content */
+    margin-left: 5%;
+    margin-right: 5%;
+    max-height: 95%;
+    /* styling */
+    background: #fff;
+    cursor: auto;
+    /* reset white-space wrapping */
+    white-space: normal;
+  }
+
+  /* contains the content */
+  .featherlight .featherlight-inner {
+    /* make sure its visible */
+    display: block;
+  }
+
+  .featherlight .featherlight-close-icon {
+    /* position: centering vertical and horizontal */
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    right: 0;
+    /* dimensions: 25px x 25px */
+    line-height: 25px;
+    width: 25px;
+    /* styling */
+    cursor: pointer;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background: #fff;
+    /* Set the background in case it overlaps the content */
+    background: rgba(255, 255, 255, 0.3);
+    color: #000;
+  }
+
+  .featherlight .featherlight-image {
+    /* styling */
+    width: 100%;
+    height: 500px !important;
+  }
+}
+@media all and (max-width: 991px) {
+  .featherlight .featherlight-image {
+    height: 250px !important;
+  }
+}
+
+@media all {
+  .featherlight-iframe .featherlight-content {
+    /* removed the border for image croping since iframe is edge to edge */
+    border-bottom: 0;
+    padding: 0;
+  }
+
+  .featherlight iframe {
+    /* styling */
+    border: none;
+  }
+
+  .featherlight * {
+    /* See https://github.com/noelboss/featherlight/issues/42 */
+    box-sizing: border-box;
+  }
+}
+/* handling phones and small screens */
+@media only screen and (max-width: 1024px) {
+  .featherlight .featherlight-content {
+    /* dimensions: maximize lightbox with for small screens */
+    margin-left: 10px;
+    margin-right: 10px;
+    max-height: 98%;
+    padding: 10px 10px 0;
+    border-bottom: 10px solid transparent;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
