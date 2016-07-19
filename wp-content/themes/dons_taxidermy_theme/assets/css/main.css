@@ -104,6 +104,10 @@ a:hover, a:active, a:focus, a:visited {
   text-decoration: none;
 }
 
+html, body, nav {
+  overflow-x: hidden !important;
+}
+
 .content-block {
   padding: 50px 0;
 }
