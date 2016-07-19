@@ -31,7 +31,7 @@ Template Name: Home Template
 			<div class="one">
 				<a href="" data-featherlight="<?php the_sub_field('image'); ?>"><img src="<?php the_sub_field('image'); ?>"></a>
 				<div class="title">
-					<h4><?php the_sub_field('title'); ?></h4>
+					<a href="" data-featherlight="<?php the_sub_field('image'); ?>"><h4><?php the_sub_field('title'); ?> <i class="fa fa-search-plus" aria-hidden="true"></i></h4></a>
 				</div>
 			</div>
 			</li>	

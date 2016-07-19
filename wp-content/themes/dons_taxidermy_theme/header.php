@@ -25,7 +25,7 @@
 <!--<![endif]-->
 <div id="Home"></div>
 <header>
-<div class="header" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/img/mountain-white-space.png);background-size: cover; ">
+<div class="header" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/img/mountain-white-space.png);background-size: cover; background-position: center center;">
 	<div class="logo-bar">
 		<div class="container">
 			<div class="pull-left">

@@ -386,6 +386,10 @@ footer .copyright p {
   opacity: .5;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .gallery {
   display: block;
   padding: 3px 0;
@@ -423,6 +427,7 @@ footer .copyright p {
 }
 @media (max-width: 991px) {
   .gallery .title {
+    left: 2px;
     width: 32vw;
   }
 }
