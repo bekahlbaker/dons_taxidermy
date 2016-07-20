@@ -19,14 +19,14 @@ function init_js() {
     // wp_enqueue_script('site-jquery');
 
     // Define Modernizr
-    wp_register_script(
-      $handle = 'site-modernizr',
-      $src = "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.7.1.min.js",
-      $deps = array(),
-      $ver = null,
-      $in_footer = true
-    );
-    wp_enqueue_script('site-modernizr');
+    // wp_register_script(
+    //   $handle = 'site-modernizr',
+    //   $src = "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.7.1.min.js",
+    //   $deps = array(),
+    //   $ver = null,
+    //   $in_footer = true
+    // );
+    // wp_enqueue_script('site-modernizr');
 
     // Vendor Concatenated Scripts
     wp_register_script(
