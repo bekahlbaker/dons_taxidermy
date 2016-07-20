@@ -24,7 +24,7 @@ function init_js() {
       $src = "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.7.1.min.js",
       $deps = array(),
       $ver = null,
-      $in_footer = false
+      $in_footer = true
     );
     wp_enqueue_script('site-modernizr');
 
@@ -34,7 +34,7 @@ function init_js() {
       $src = get_bloginfo('template_directory') . '/assets/js/vendors.min.js',
       $deps = array('jquery'),
       $ver = null,
-      $in_footer = false
+      $in_footer = true
     );
     wp_enqueue_script('vendor-scripts');
 

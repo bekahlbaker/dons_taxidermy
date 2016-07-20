@@ -104,7 +104,7 @@ a:hover, a:active, a:focus, a:visited {
   text-decoration: none;
 }
 
-html, body, nav {
+body {
   overflow-x: hidden !important;
 }
 
