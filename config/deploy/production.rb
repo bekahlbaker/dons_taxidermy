@@ -7,12 +7,11 @@ set :ssh_options, {
   forward_agent: true,
 }
 
-# namespace :deploy do
-#    task :config_file do
-#      on roles :all do
-#      execute "rm -r #{release_path}/wp-config.php"
-#        # execute "mv #{release_path}/wp-config-production.php #{release_path}/wp-config.php"
-#      end
-#    end
-#    after :updated, :config_file
-# end
+namespace :deploy do
+   task :permissions do
+     on roles :all do
+     execute "chmod -R 777 #{release_path}"
+     end
+   end
+   after :updated, :permissions
+end
